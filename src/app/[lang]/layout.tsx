@@ -2,9 +2,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AudioPlayer } from "@/components/ui/AudioPlayer";
 
-export async function generateStaticParams() {
-    return [{ lang: "es" }, { lang: "en" }];
-}
+// Allow dynamic rendering for i18n routes
+export const dynamicParams = true;
+export const dynamic = "force-dynamic";
 
 export default function Layout({
     children,
