@@ -29,14 +29,8 @@ export default function DiscographyPage() {
                                 </span>
                             </div>
 
-                            {album.collab && (
-                                <p className="text-sm text-zinc-400 mb-4">
-                                    <span className="text-zinc-500 font-semibold">{t.discography.collab}:</span> {album.collab}
-                                </p>
-                            )}
-
                             <p className="text-zinc-300 text-sm mb-6 flex-1 italic leading-relaxed">
-                                {album.desc[lang as "es" | "en"]}
+                                {album.description[lang as "es" | "en"]}
                             </p>
 
                             <button className="w-full py-3 px-4 border border-gold/50 text-gold hover:bg-gold hover:text-black transition-all duration-300 rounded font-semibold text-sm uppercase tracking-wide">
