@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useTranslation } from "@/hooks/useTranslation";
 import { PlayCircleIcon } from "@heroicons/react/24/solid";
 import { GlassCard } from "@/components/ui/GlassCard";

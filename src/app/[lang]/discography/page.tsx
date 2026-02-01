@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useTranslation } from "@/hooks/useTranslation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import content from "@/data/content.json";
