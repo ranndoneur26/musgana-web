@@ -35,7 +35,7 @@ export default function HomePage() {
                     {/* 40th ANNIVERSARY LOGO - Absolute position nicely overlapping */}
                     <div className="absolute -top-36 left-0 -translate-y-1/2 w-[29rem] h-[29rem] md:w-[36rem] md:h-[36rem] transition-transform duration-500 hover:scale-105 z-40">
                         <Image
-                            src="/images/40 anniversari.svg"
+                            src="/images/40-anniversari.svg"
                             alt="La Musgaña 40 Aniversario (1986-2026)"
                             fill
                             className="object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"

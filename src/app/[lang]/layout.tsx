@@ -2,6 +2,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AudioPlayer } from "@/components/ui/AudioPlayer";
 
+export async function generateStaticParams() {
+    return [{ lang: "es" }, { lang: "en" }];
+}
+
 export default function Layout({
     children,
 }: {
