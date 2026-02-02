@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { GlassCard } from "@/components/ui/GlassCard";

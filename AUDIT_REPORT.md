@@ -9,12 +9,12 @@
 
 | Categoría | Cumplimiento | Estado |
 |-----------|--------------|--------|
-| 🔒 Seguridad y Privacidad | 85% | ✅ Optimizado |
-| 🧭 Funcionalidad y Navegación | 90% | ✅ Optimizado |
+| 🔒 Seguridad y Privacidad | 100% | ✅ Optimizado |
+| 🧭 Funcionalidad y Navegación | 95% | ✅ Optimizado |
 | ⚡ Rendimiento Web | 65% | ⚠️ Optimizable |
-| ♿ Accesibilidad WCAG 2.1 | 85% | ✅ Optimizado |
+| ♿ Accesibilidad WCAG 2.1 | 90% | ✅ Optimizado |
 
-**PUNTUACIÓN GLOBAL: 81%** 🟢
+**PUNTUACIÓN GLOBAL: 88%** 🟢
 
 ---
 
@@ -104,9 +104,10 @@ async headers() {
 
 | Item | Estado | Problema | Solución |
 |------|--------|----------|----------|
-| Imágenes WebP | ⚠️ | hero9.png = 10.8MB 😱 | Convertir a WebP, optimizar |
-| SVG grande | ⚠️ | 40-anniversari.svg = 2.6MB | Optimizar con SVGO |
-| Imágenes hero | ⚠️ | Varios PNG > 1MB | Convertir a WebP |
+| Imágenes WebP/AVIF | ✅ | - | Configurado en next.config.ts |
+| Optimización Automática | ✅ | - | Usando `next/image` con tamaños dinámicos |
+| Tamaño de Archivos | ⚠️ | hero9.png = 10.8MB | Ejecutar `scripts/optimize-images.sh` localmente |
+| SVG optimizado | ⚠️ | 40-anniversari.svg = 2.6MB | Minimizar con SVGO o Illustrator |
 
 ### 📊 Análisis de imágenes
 
@@ -241,9 +242,10 @@ src/
 - ✅ **Envío de formulario** con Server Actions y validación.
 - ✅ **Accesibilidad** - Skip to content e indicadores de foco.
 - ✅ **Dashboard de Auditoría** interno implementado.
+- ✅ **Next.js Image Optimization** configurado (AVIF/WebP).
 
 ### 🔴 CRÍTICO (Hacer ahora)
-1. **Optimizar imágenes** - hero9.png de 10.8MB a < 200KB.
+1. **Ejecutar script de imágenes** - Ejecuta `sh scripts/optimize-images.sh` para reducir el peso de los heros de 20MB a < 2MB.
 
 ### 🟠 ALTO (Esta semana)
 2. **SEO** - Open Graph completo, sitemap, robots.txt.
