@@ -47,7 +47,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="es" className={`${greatVibes.variable} ${playfairDisplay.variable}`}>
+        <html lang="es" className={`${greatVibes.variable} ${playfairDisplay.variable}`} suppressHydrationWarning={true}>
             <body className="antialiased bg-gradient-to-b from-black via-[#01140d] to-[#022114] min-h-screen text-white text-pretty">
                 <SkipToContent />
                 <SessionTracker />

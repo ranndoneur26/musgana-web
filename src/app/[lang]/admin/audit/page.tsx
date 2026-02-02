@@ -19,8 +19,10 @@ import { getAuditData, AuditCategory } from "@/lib/audit-service";
 export default function AuditDashboard() {
     const [data, setData] = useState<any>(null);
     const [loading, setLoading] = useState(true);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         async function fetchData() {
             const auditData = await getAuditData();
             setData(auditData);
@@ -29,7 +31,7 @@ export default function AuditDashboard() {
         fetchData();
     }, []);
 
-    if (loading) {
+    if (loading || !mounted || !data) {
         return (
             <div className="min-h-screen bg-black flex items-center justify-center">
                 <div className="animate-spin text-gold">
@@ -104,7 +106,7 @@ export default function AuditDashboard() {
                                 {cat.name}
                             </h2>
                             <div className="space-y-6">
-                                {cat.items.map((item) => (
+                                {cat.items.map((item: any) => (
                                     <div key={item.id} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
                                         <div className="flex items-start justify-between mb-2">
                                             <h4 className="font-semibold text-lg flex items-center gap-2">
