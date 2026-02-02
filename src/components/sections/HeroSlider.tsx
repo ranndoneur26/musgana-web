@@ -80,20 +80,31 @@ export function HeroSlider() {
             ))}
 
             {/* Controls */}
-            <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors z-20">
+            <button
+                onClick={prev}
+                aria-label="Imagen anterior"
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors z-20 focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded-full"
+            >
                 <ChevronLeft size={48} />
             </button>
-            <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors z-20">
+            <button
+                onClick={next}
+                aria-label="Imagen siguiente"
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors z-20 focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded-full"
+            >
                 <ChevronRight size={48} />
             </button>
 
             {/* Indicators */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20" role="tablist" aria-label="Indicadores de slide">
                 {slides.map((_, i) => (
                     <button
                         key={i}
                         onClick={() => setCurrent(i)}
-                        className={`w-2 h-2 rounded-full transition-all ${i === current ? "bg-gold scale-125" : "bg-white/30 hover:bg-white/50"
+                        role="tab"
+                        aria-selected={i === current}
+                        aria-label={`Ir a slide ${i + 1} de ${slides.length}`}
+                        className={`w-2 h-2 rounded-full transition-all focus:ring-2 focus:ring-gold focus:ring-offset-1 focus:ring-offset-black ${i === current ? "bg-gold scale-125" : "bg-white/30 hover:bg-white/50"
                             }`}
                     />
                 ))}
