@@ -14,32 +14,32 @@ export function VideosSection() {
         {
             id: "llI0m0O0lAo",
             title: "La Musgaña - Video 1",
-            thumbnail: "https://i.ytimg.com/vi/llI0m0O0lAo/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/llI0m0O0lAo/maxresdefault.jpg"
         },
         {
             id: "Nb3BMq16Rd4",
             title: "La Musgaña - Video 2",
-            thumbnail: "https://i.ytimg.com/vi/Nb3BMq16Rd4/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/Nb3BMq16Rd4/maxresdefault.jpg"
         },
         {
             id: "pEW6yjkV9PE",
             title: "La Musgaña - Video 3",
-            thumbnail: "https://i.ytimg.com/vi/pEW6yjkV9PE/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/pEW6yjkV9PE/maxresdefault.jpg"
         },
         {
             id: "-sdLOr_cuW0",
             title: "La Musgaña - Video 4",
-            thumbnail: "https://i.ytimg.com/vi/-sdLOr_cuW0/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/-sdLOr_cuW0/maxresdefault.jpg"
         },
         {
             id: "oTqeuMzhUoU",
             title: "La Musgaña - Video 5",
-            thumbnail: "https://i.ytimg.com/vi/oTqeuMzhUoU/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/oTqeuMzhUoU/maxresdefault.jpg"
         },
         {
             id: "spwvRzqFYd0",
             title: "La Musgaña - Video 6",
-            thumbnail: "https://i.ytimg.com/vi/spwvRzqFYd0/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/spwvRzqFYd0/maxresdefault.jpg"
         },
     ];
 
@@ -82,7 +82,14 @@ export function VideosSection() {
                                                     src={video.thumbnail}
                                                     alt={video.title}
                                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105 z-0"
+                                                    padding="0"
                                                     loading="lazy"
+                                                    onError={(e) => {
+                                                        const target = e.target as HTMLImageElement;
+                                                        if (target.src.includes('maxresdefault')) {
+                                                            target.src = target.src.replace('maxresdefault', 'hqdefault');
+                                                        }
+                                                    }}
                                                 />
                                             )}
 
@@ -98,10 +105,9 @@ export function VideosSection() {
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     onClick={(e) => e.stopPropagation()}
-                                                    className="text-white font-semibold text-sm flex items-center gap-2 hover:text-gold transition-colors bg-black/50 px-3 py-1 rounded-full"
+                                                    className="text-white hover:text-gold transition-colors bg-black/60 hover:bg-black/80 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-white/10 flex items-center gap-2 shadow-lg"
                                                 >
-                                                    {t.videos.watch} en YouTube
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                    {t.videos.openYouTube ? t.videos.openYouTube.toUpperCase() : "ABRIR EN YOUTUBE"}
                                                 </a>
                                             </div>
                                         </div>
@@ -148,4 +154,3 @@ export function VideosSection() {
         </section>
     );
 }
-
