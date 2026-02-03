@@ -404,7 +404,7 @@
             "id": "12",
             "title": "La Musgaña",
             "year": "1986",
-            "image": "/albums/la-musgana.jpg",
+            "image": "/images/40-anniversari.svg",
             "description": {
                 "es": "Demo inicial que marca el nacimiento del grupo y su visión de renovación del folk castellano.",
                 "en": "Initial demo marking the birth of the group and their vision of renewing Castilian folk."
@@ -417,9 +417,7 @@
                 "Enrique Almendros",
                 "José María Climent",
                 "Rafael Martín"
-            ],
-            "spotifyLink": "https://open.spotify.com",
-            "buyLink": "https://example.com/buy"
+            ]
         }
     ]
 }
