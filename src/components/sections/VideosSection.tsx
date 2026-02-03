@@ -14,7 +14,7 @@ export function VideosSection() {
 
                 <div className="flex flex-col items-center">
                     {/* Direct Iframe Embed - Bulletproof Implementation */}
-                    <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black border border-white/10 mb-12">
+                    <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black border border-white/10 mb-12 group relative">
                         <div className="relative w-full pb-[56.25%]">
                             <iframe
                                 className="absolute top-0 left-0 w-full h-full"
@@ -24,6 +24,9 @@ export function VideosSection() {
                                 allowFullScreen
                                 style={{ border: 0 }}
                             ></iframe>
+                            {/* Corporate Green Tint Overlay */}
+                            <div className="absolute inset-0 bg-[#022114] opacity-60 mix-blend-soft-light transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-10" />
+                            <div className="absolute inset-0 bg-[#022114]/40 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-10" />
                         </div>
                     </div>
 
