@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
+
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function VideosSection() {
     const { t } = useTranslation();
+    const [isPlaying, setIsPlaying] = useState(false);
 
     return (
         <section className="container mx-auto px-4 py-20">
@@ -14,26 +17,36 @@ export function VideosSection() {
 
                 <div className="flex flex-col items-center">
                     {/* Direct Iframe Embed - Bulletproof Implementation */}
-                    <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black border border-white/10 mb-12 group relative">
+                    <div
+                        className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black border border-white/10 mb-12 group relative"
+                        onClick={() => setIsPlaying(true)}
+                    >
                         <div className="relative w-full pb-[56.25%]">
                             <iframe
                                 className="absolute top-0 left-0 w-full h-full"
-                                src="https://www.youtube.com/embed/5Ath7RHXgh4?playlist=5Ath7RHXgh4,RV8l4BWSDrk,mOSdUJjwrGQ"
+                                src={`https://www.youtube.com/embed/RV8l4BWSDrk?playlist=RV8l4BWSDrk,5Ath7RHXgh4,mOSdUJjwrGQ${isPlaying ? '&autoplay=1' : ''}`}
                                 title="La Musgaña Video"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
                                 style={{ border: 0 }}
                             ></iframe>
-                            {/* Corporate Green Tint Overlay */}
-                            <div className="absolute inset-0 bg-[#022114] opacity-60 mix-blend-soft-light transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-10" />
-                            <div className="absolute inset-0 bg-[#022114]/40 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-10" />
+
+                            {/* Corporate Green Tint Overlay - Only visible when NOT playing */}
+                            {!isPlaying && (
+                                <>
+                                    <div className="absolute inset-0 bg-[#022114] opacity-60 mix-blend-soft-light transition-opacity duration-500 group-hover:opacity-0 cursor-pointer z-10" />
+                                    <div className="absolute inset-0 bg-[#022114]/40 transition-opacity duration-500 group-hover:opacity-0 cursor-pointer z-10 flex items-center justify-center">
+                                        {/* Optional: Add a custom play button here if desired, otherwise the tint just vanishes on hover/click */}
+                                    </div>
+                                </>
+                            )}
                         </div>
                     </div>
 
                     {/* External Link */}
                     <p className="text-zinc-400 mb-6 text-sm md:text-base">{t.videos.searchVideos}</p>
                     <a
-                        href="https://www.youtube.com/watch?v=5Ath7RHXgh4"
+                        href="https://www.youtube.com/watch?v=RV8l4BWSDrk"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors text-sm font-semibold border border-gold/30 px-6 py-2 rounded-full hover:bg-gold/10 uppercase tracking-widest"
