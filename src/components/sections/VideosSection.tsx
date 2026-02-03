@@ -14,32 +14,32 @@ export function VideosSection() {
         {
             id: "llI0m0O0lAo",
             title: "La Musgaña - Video 1",
-            thumbnail: "https://i.ytimg.com/vi/llI0m0O0lAo/maxresdefault.jpg"
+            thumbnail: "https://img.youtube.com/vi/llI0m0O0lAo/maxresdefault.jpg"
         },
         {
             id: "Nb3BMq16Rd4",
             title: "La Musgaña - Video 2",
-            thumbnail: "https://i.ytimg.com/vi/Nb3BMq16Rd4/maxresdefault.jpg"
+            thumbnail: "https://img.youtube.com/vi/Nb3BMq16Rd4/maxresdefault.jpg"
         },
         {
             id: "pEW6yjkV9PE",
             title: "La Musgaña - Video 3",
-            thumbnail: "https://i.ytimg.com/vi/pEW6yjkV9PE/maxresdefault.jpg"
+            thumbnail: "https://img.youtube.com/vi/pEW6yjkV9PE/maxresdefault.jpg"
         },
         {
             id: "-sdLOr_cuW0",
             title: "La Musgaña - Video 4",
-            thumbnail: "https://i.ytimg.com/vi/-sdLOr_cuW0/maxresdefault.jpg"
+            thumbnail: "https://img.youtube.com/vi/-sdLOr_cuW0/maxresdefault.jpg"
         },
         {
             id: "oTqeuMzhUoU",
             title: "La Musgaña - Video 5",
-            thumbnail: "https://i.ytimg.com/vi/oTqeuMzhUoU/maxresdefault.jpg"
+            thumbnail: "https://img.youtube.com/vi/oTqeuMzhUoU/maxresdefault.jpg"
         },
         {
             id: "spwvRzqFYd0",
             title: "La Musgaña - Video 6",
-            thumbnail: "https://i.ytimg.com/vi/spwvRzqFYd0/maxresdefault.jpg"
+            thumbnail: "https://img.youtube.com/vi/spwvRzqFYd0/maxresdefault.jpg"
         },
     ];
 
@@ -81,7 +81,7 @@ export function VideosSection() {
                                                 <img
                                                     src={video.thumbnail}
                                                     alt={video.title}
-                                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105 z-0"
+                                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-105 z-0"
                                                     padding="0"
                                                     loading="lazy"
                                                     onError={(e) => {
