@@ -38,10 +38,12 @@ const nextConfig: NextConfig = {
     },
     async headers() {
         return [
+            /*
             {
                 source: "/:path*",
                 headers: securityHeaders,
             },
+            */
         ];
     },
 };

@@ -13,12 +13,15 @@ export function YouTubePlayer({ videoId, className }: YouTubePlayerProps) {
             <div className="relative w-full pb-[56.25%]">
                 <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&controls=1&playsinline=1`}
-                    title="La Musgaña Video"
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${videoId}?si=GIrcvVg7Rm13nXS5`}
+                    title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    loading="lazy"
+                    style={{ border: 0 }}
                 />
             </div>
         </div>
