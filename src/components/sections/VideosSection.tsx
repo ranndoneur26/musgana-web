@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
-import { YouTubePlayer } from "@/components/ui/YouTubePlayer";
 
 export function VideosSection() {
     const { t } = useTranslation();
@@ -14,8 +13,19 @@ export function VideosSection() {
                 </h2>
 
                 <div className="flex flex-col items-center">
-                    {/* Integrated Custom Player */}
-                    <YouTubePlayer videoId="RV8l4BWSDrk" className="w-full mb-12" />
+                    {/* Direct Iframe Embed - Bulletproof Implementation */}
+                    <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black border border-white/10 mb-12">
+                        <div className="relative w-full pb-[56.25%]">
+                            <iframe
+                                className="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/RV8l4BWSDrk"
+                                title="La Musgaña Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                style={{ border: 0 }}
+                            ></iframe>
+                        </div>
+                    </div>
 
                     {/* External Link */}
                     <p className="text-zinc-400 mb-6 text-sm md:text-base">{t.videos.searchVideos}</p>
