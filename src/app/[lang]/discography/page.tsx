@@ -44,14 +44,14 @@ export default function DiscographyPage() {
                             </p>
 
                             <div className="flex gap-2 mt-auto">
-                                {album.spotifyLink && (
+                                {(album.spotifyLink || (album as any).streamingLink) && (
                                     <a
-                                        href={album.spotifyLink}
+                                        href={album.spotifyLink || (album as any).streamingLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex-1 py-3 px-4 border border-green-500/50 text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300 rounded font-semibold text-sm uppercase tracking-wide text-center"
                                     >
-                                        Spotify
+                                        {album.spotifyLink ? "Spotify" : t.discography.listenOnline}
                                     </a>
                                 )}
                                 {album.buyLink && (
