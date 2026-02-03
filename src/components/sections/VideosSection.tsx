@@ -18,7 +18,7 @@ export function VideosSection() {
                         <div className="relative w-full pb-[56.25%]">
                             <iframe
                                 className="absolute top-0 left-0 w-full h-full"
-                                src="https://www.youtube.com/embed/d1J43_TXly0"
+                                src="https://www.youtube.com/embed/RV8l4BWSDrk"
                                 title="La Musgaña Video"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
@@ -30,7 +30,7 @@ export function VideosSection() {
                     {/* External Link */}
                     <p className="text-zinc-400 mb-6 text-sm md:text-base">{t.videos.searchVideos}</p>
                     <a
-                        href="https://www.youtube.com/watch?v=d1J43_TXly0"
+                        href="https://www.youtube.com/watch?v=RV8l4BWSDrk"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors text-sm font-semibold border border-gold/30 px-6 py-2 rounded-full hover:bg-gold/10 uppercase tracking-widest"
