@@ -72,7 +72,7 @@ export function HeroSlider() {
                         <h2 className="text-6xl md:text-9xl font-normal text-white mb-4 font-[family-name:var(--font-great-vibes)] group-hover:text-gold transition-colors duration-500">
                             La Musgaña
                         </h2>
-                        <p className="text-xl md:text-2xl text-gold uppercase tracking-[0.5em] group-hover:text-white transition-colors duration-500">
+                        <p className="text-xl md:text-2xl text-gold uppercase tracking-[0.5em] group-hover:text-white transition-colors duration-500 font-[family-name:var(--font-playfair)]">
                             {t.home.heroSubtitle}
                         </p>
                     </div>

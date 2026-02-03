@@ -34,7 +34,7 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
                 onClick={onToggle}
                 className="flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:text-gold"
             >
-                <span className="flex-1 pr-4 text-center md:text-left">
+                <span className="flex-1 pr-4 text-left">
                     {(() => {
                         // Check if title has pattern: "YYYY-YYYY - Title. Rest of text"
                         const match = title.match(/^(\d{4}-\d{4})\s*-\s*([^.]+\.)\s*(.*)$/);
@@ -72,7 +72,7 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
                         transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
                         <div
-                            className="text-zinc-400 max-w-none [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [& strong]:text-gold"
+                            className="text-left text-zinc-400 max-w-none [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [& strong]:text-gold"
                             dangerouslySetInnerHTML={{ __html: String(children) }}
                         />
                     </motion.div>

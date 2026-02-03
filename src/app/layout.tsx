@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Great_Vibes, Playfair_Display } from "next/font/google";
+import { Great_Vibes, Playfair_Display, Montserrat } from "next/font/google";
 
 const greatVibes = Great_Vibes({
     weight: "400",
@@ -12,6 +12,12 @@ const playfairDisplay = Playfair_Display({
     weight: ["400", "500", "600", "700"],
     subsets: ["latin"],
     variable: "--font-playfair",
+});
+
+const montserrat = Montserrat({
+    weight: ["300", "400", "500", "600", "700"],
+    subsets: ["latin"],
+    variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -48,8 +54,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="es" className={`${greatVibes.variable} ${playfairDisplay.variable}`} suppressHydrationWarning={true}>
-            <body className="antialiased bg-gradient-to-b from-black via-[#01140d] to-[#022114] min-h-screen text-white text-pretty font-[family-name:var(--font-playfair)]">
+        <html lang="es" className={`${greatVibes.variable} ${playfairDisplay.variable} ${montserrat.variable}`} suppressHydrationWarning={true}>
+            <body className="antialiased bg-gradient-to-b from-black via-[#01140d] to-[#022114] min-h-screen text-white text-pretty font-[family-name:var(--font-montserrat)]">
                 <SkipToContent />
                 <SessionTracker />
                 <CookieConsent />
