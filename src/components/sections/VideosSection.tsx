@@ -9,16 +9,16 @@ export function VideosSection() {
     const [isPlaying, setIsPlaying] = useState(false);
 
     return (
-        <section className="container mx-auto px-4 py-20">
+        <section className="container mx-auto px-4 py-10 md:py-20">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-xl md:text-4xl font-semibold mb-12 text-left text-gold font-[family-name:var(--font-playfair)]">
+                <h2 className="text-xl md:text-4xl font-semibold mb-6 md:mb-12 text-left text-gold font-[family-name:var(--font-playfair)]">
                     {t.nav.videos}
                 </h2>
 
                 <div className="flex flex-col items-center">
                     {/* Direct Iframe Embed - Bulletproof Implementation */}
                     <div
-                        className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black border border-white/10 mb-12 group relative"
+                        className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-black border border-white/10 mb-6 md:mb-12 group relative"
                         onClick={() => setIsPlaying(true)}
                     >
                         <div className="relative w-full pb-[56.25%]">

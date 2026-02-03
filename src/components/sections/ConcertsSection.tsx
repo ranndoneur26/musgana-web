@@ -8,9 +8,9 @@ export function ConcertsSection() {
     const { t } = useTranslation();
 
     return (
-        <section className="container mx-auto px-4 py-20 flex flex-col items-center">
+        <section className="container mx-auto px-4 py-10 md:py-20 flex flex-col items-center">
             <div className="w-full max-w-5xl">
-                <h2 className="text-xl md:text-4xl font-semibold mb-12 text-left text-gold font-[family-name:var(--font-playfair)]">
+                <h2 className="text-xl md:text-4xl font-semibold mb-6 md:mb-12 text-left text-gold font-[family-name:var(--font-playfair)]">
                     {t.nav.concerts}
                 </h2>
             </div>

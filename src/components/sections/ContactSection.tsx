@@ -59,9 +59,9 @@ export function ContactSection() {
     }
 
     return (
-        <section id="contact" className="container mx-auto px-4 py-20 flex flex-col items-center">
+        <section id="contact" className="container mx-auto px-4 py-10 md:py-20 flex flex-col items-center">
             <div className="w-full max-w-5xl">
-                <h2 className="text-xl md:text-4xl font-semibold mb-12 text-left text-gold font-[family-name:var(--font-playfair)]">
+                <h2 className="text-xl md:text-4xl font-semibold mb-6 md:mb-12 text-left text-gold font-[family-name:var(--font-playfair)]">
                     {t.contact.title}
                 </h2>
 
@@ -215,7 +215,7 @@ export function ContactSection() {
 
                     {/* Management Info below form */}
                     <div
-                        className="mt-20 pt-8 border-t border-white/5 text-zinc-400"
+                        className="mt-10 md:mt-20 pt-8 border-t border-white/5 text-zinc-400"
                         onMouseMove={handleMouseMove}
                         onMouseLeave={handleMouseLeave}
                     >

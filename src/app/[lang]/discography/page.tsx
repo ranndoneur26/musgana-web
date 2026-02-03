@@ -10,8 +10,8 @@ export default function DiscographyPage() {
     const { t, lang } = useTranslation();
 
     return (
-        <div className="container mx-auto px-4 py-20 min-h-screen">
-            <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+        <div className="container mx-auto px-4 py-10 md:py-20 min-h-screen">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-white">
                 {t.nav.discography}
             </h1>
 
