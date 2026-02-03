@@ -11,7 +11,8 @@ export function middleware(request: NextRequest) {
     headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
 
     // X-Frame-Options: Prevent clickjacking
-    headers.set('X-Frame-Options', 'DENY');
+    // X-Frame-Options: Prevent clickjacking - Relaxed for iframes
+    headers.set('X-Frame-Options', 'SAMEORIGIN');
 
     // X-Content-Type-Options: Prevent MIME type sniffing
     headers.set('X-Content-Type-Options', 'nosniff');
@@ -25,12 +26,11 @@ export function middleware(request: NextRequest) {
         'camera=(), microphone=(), geolocation=(), payment=()'
     );
 
-    // Content-Security-Policy (Basic)
-    // Note: A strict CSP often requires careful tuning for Next.js (scripts, styles, images).
-    // We start with a policy that allows self and typical assets, but blocks object/base-uri.
+    // Content-Security-Policy
+    // Updated to allow YouTube embeds
     headers.set(
         'Content-Security-Policy',
-        "default-src 'self'; img-src 'self' data: blob:; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+        "default-src 'self'; img-src 'self' data: blob: https:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';"
     );
 
     return response;
