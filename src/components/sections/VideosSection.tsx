@@ -22,6 +22,7 @@ export function VideosSection() {
                                 title="La Musgaña Video"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
+                                referrerPolicy="strict-origin-when-cross-origin"
                                 style={{ border: 0 }}
                             ></iframe>
                         </div>
