@@ -66,7 +66,7 @@ export function Slider() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
                             onClick={() => handleAlbumClick(album)}
-                            className="min-w-[180px] md:min-w-[234px] max-w-[360px] aspect-square bg-zinc-800 rounded-lg flex-shrink-0 border border-white/5 snap-center relative overflow-hidden group/card cursor-pointer"
+                            className="w-[220px] h-[220px] md:w-auto md:h-auto min-w-[180px] md:min-w-[234px] max-w-[360px] aspect-square bg-zinc-800 rounded-lg flex-shrink-0 border border-white/5 snap-center relative overflow-hidden group/card cursor-pointer"
                         >
                             {/* Album Image */}
                             {album.image && (

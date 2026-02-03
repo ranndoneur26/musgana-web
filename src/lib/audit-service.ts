@@ -17,8 +17,8 @@ export async function getAuditData() {
     const categories: AuditCategory[] = [
         {
             name: 'Seguridad y Privacidad',
-            score: 100,
-            status: 'passed',
+            score: 0, // Calculated dynamically
+            status: 'failed',
             items: [
                 {
                     id: 'ssl-tls',
@@ -30,13 +30,20 @@ export async function getAuditData() {
                     id: 'security-headers',
                     name: 'Encabezados de Seguridad',
                     status: 'passed',
-                    description: 'HSTS, CSP, X-Frame-Options, etc. configurados.',
+                    description: 'HSTS, CSP, X-Frame-Options configurados via middleware.',
                 },
                 {
                     id: 'session-timeout',
                     name: 'Cierre de Sesión Automático',
                     status: 'passed',
                     description: 'Hook useSessionTimeout implementado (15 min).',
+                },
+                {
+                    id: 'two-factor-auth',
+                    name: 'Autenticación 2FA',
+                    status: 'failed',
+                    description: 'Autenticación de dos factores no implementada.',
+                    recommendation: 'Implementar 2FA usando TOTP o Email OTP.',
                 },
                 {
                     id: 'audit-logs',
@@ -48,7 +55,7 @@ export async function getAuditData() {
         },
         {
             name: 'Funcionalidad y Navegación',
-            score: 95,
+            score: 0,
             status: 'passed',
             items: [
                 {
@@ -73,7 +80,7 @@ export async function getAuditData() {
         },
         {
             name: 'Rendimiento (Web Vitals)',
-            score: 65,
+            score: 0,
             status: 'failed',
             items: [
                 {
@@ -81,7 +88,7 @@ export async function getAuditData() {
                     name: 'Optimización de Imágenes',
                     status: 'failed',
                     description: 'Se detectan imágenes críticas con tamaño excesivo (>1MB).',
-                    recommendation: 'Comprimir hero9.png (10.8MB) y convertir a WebP.',
+                    recommendation: 'Ejecutar script `scripts/optimize-images.sh` manualmente.',
                 },
                 {
                     id: 'lazy-loading',
@@ -93,7 +100,7 @@ export async function getAuditData() {
         },
         {
             name: 'Accesibilidad (WCAG 2.1)',
-            score: 90,
+            score: 0,
             status: 'passed',
             items: [
                 {
@@ -111,6 +118,14 @@ export async function getAuditData() {
             ]
         }
     ];
+
+    // Calculate scores
+    categories.forEach(cat => {
+        const total = cat.items.length;
+        const passed = cat.items.filter(i => i.status === 'passed').length;
+        cat.score = Math.round((passed / total) * 100);
+        cat.status = cat.score === 100 ? 'passed' : cat.score >= 70 ? 'warning' : 'failed';
+    });
 
     return {
         categories,

@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 import { SkipToContent } from "@/components/ui/SkipToContent";
 import { SessionTracker } from "@/components/ui/SessionTracker";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 export default function RootLayout({
     children,
@@ -48,9 +49,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es" className={`${greatVibes.variable} ${playfairDisplay.variable}`} suppressHydrationWarning={true}>
-            <body className="antialiased bg-gradient-to-b from-black via-[#01140d] to-[#022114] min-h-screen text-white text-pretty">
+            <body className="antialiased bg-gradient-to-b from-black via-[#01140d] to-[#022114] min-h-screen text-white text-pretty font-[family-name:var(--font-playfair)]">
                 <SkipToContent />
                 <SessionTracker />
+                <CookieConsent />
                 <main id="main-content">
                     {children}
                 </main>

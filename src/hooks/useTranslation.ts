@@ -55,6 +55,13 @@ const dictionary = {
             companyPlaceholder: "Nombre de la empresa",
             captchaPlaceholder: "¿Cuánto es 3 + 4?",
         },
+        cookies: {
+            title: "Cookies",
+            description: "Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación y analizar nuestro tráfico.",
+            accept: "Aceptar",
+            decline: "Configurar",
+            settingsTitle: "Preferencias de Cookies",
+        },
     },
     en: {
         nav: {
@@ -108,6 +115,13 @@ const dictionary = {
             cityPlaceholder: "City",
             companyPlaceholder: "Company name",
             captchaPlaceholder: "What is 3 + 4?",
+        },
+        cookies: {
+            title: "Cookies",
+            description: "We use our own and third-party cookies to improve your experience and analyze our traffic.",
+            accept: "Accept",
+            decline: "Settings",
+            settingsTitle: "Cookie Preferences",
         },
     },
 };

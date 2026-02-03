@@ -14,32 +14,32 @@ export function VideosSection() {
         {
             id: "llI0m0O0lAo",
             title: "La Musgaña - Video 1",
-            thumbnail: "https://img.youtube.com/vi/llI0m0O0lAo/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/llI0m0O0lAo/hqdefault.jpg"
         },
         {
             id: "Nb3BMq16Rd4",
             title: "La Musgaña - Video 2",
-            thumbnail: "https://img.youtube.com/vi/Nb3BMq16Rd4/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/Nb3BMq16Rd4/hqdefault.jpg"
         },
         {
             id: "pEW6yjkV9PE",
             title: "La Musgaña - Video 3",
-            thumbnail: "https://img.youtube.com/vi/pEW6yjkV9PE/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/pEW6yjkV9PE/hqdefault.jpg"
         },
         {
             id: "-sdLOr_cuW0",
             title: "La Musgaña - Video 4",
-            thumbnail: "https://img.youtube.com/vi/-sdLOr_cuW0/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/-sdLOr_cuW0/hqdefault.jpg"
         },
         {
             id: "oTqeuMzhUoU",
             title: "La Musgaña - Video 5",
-            thumbnail: "https://img.youtube.com/vi/oTqeuMzhUoU/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/oTqeuMzhUoU/hqdefault.jpg"
         },
         {
             id: "spwvRzqFYd0",
             title: "La Musgaña - Video 6",
-            thumbnail: "https://img.youtube.com/vi/spwvRzqFYd0/hqdefault.jpg"
+            thumbnail: "https://i.ytimg.com/vi/spwvRzqFYd0/hqdefault.jpg"
         },
     ];
 
@@ -60,65 +60,52 @@ export function VideosSection() {
                             transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                             className="w-[85%] mx-auto md:w-full"
                         >
-                            <GlassCard
-                                className="group relative aspect-video p-0 overflow-hidden"
-                            >
-                                {playingVideo === video.id && !video.id.startsWith('placeholder') ? (
-                                    // Video player
-                                    <div className="absolute inset-0">
+                            <GlassCard className="group relative aspect-video p-0 overflow-hidden hover:ring-2 hover:ring-gold/50 transition-all duration-300">
+                                {playingVideo === video.id ? (
+                                    <div className="w-full h-full bg-black">
                                         <iframe
                                             width="100%"
                                             height="100%"
-                                            src={`https://www.youtube.com/embed/${video.id}?autoplay=1&si=ohTBk-HL5PCFzFLs`}
+                                            src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0`}
                                             title={video.title}
                                             frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
-                                            className="w-full h-full"
-                                        />
+                                            className="absolute inset-0"
+                                        ></iframe>
                                     </div>
                                 ) : (
-                                    // Thumbnail/Placeholder
-                                    <>
-                                        <div
-                                            className="absolute inset-0 bg-zinc-800 flex items-center justify-center cursor-pointer transition-all duration-500 grayscale opacity-60 hover:grayscale-0 hover:opacity-100"
-                                            onClick={() => !video.id.startsWith('placeholder') && setPlayingVideo(video.id)}
-                                            style={video.thumbnail ? {
-                                                backgroundImage: `url(${video.thumbnail})`,
-                                                backgroundSize: 'cover',
-                                                backgroundPosition: 'center',
-                                                backgroundRepeat: 'no-repeat'
-                                            } : {}}
-                                        >
-                                            {!video.thumbnail && (
-                                                <PlayCircleIcon className="w-16 h-16 text-white/50 group-hover:text-gold group-hover:scale-110 transition-all duration-300" />
-                                            )}
+                                    <div className="block w-full h-full relative cursor-pointer" onClick={() => setPlayingVideo(video.id)}>
+                                        <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center">
                                             {video.thumbnail && (
-                                                <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition-colors flex items-center justify-center">
-                                                    <PlayCircleIcon className="w-20 h-20 text-white hover:text-gold hover:scale-110 transition-all duration-300 drop-shadow-lg" />
-                                                </div>
+                                                <img
+                                                    src={video.thumbnail}
+                                                    alt={video.title}
+                                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105 z-0"
+                                                    loading="lazy"
+                                                />
                                             )}
+
+                                            <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                                                <div className="bg-black/40 rounded-full p-3 backdrop-blur-md border border-white/10 group-hover:bg-black/60 transition-colors">
+                                                    <PlayCircleIcon className="w-16 h-16 text-gold drop-shadow-lg" />
+                                                </div>
+                                            </div>
+
+                                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex justify-end">
+                                                <a
+                                                    href={`https://www.youtube.com/watch?v=${video.id}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    className="text-white font-semibold text-sm flex items-center gap-2 hover:text-gold transition-colors bg-black/50 px-3 py-1 rounded-full"
+                                                >
+                                                    {t.videos.watch} en YouTube
+                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                </a>
+                                            </div>
                                         </div>
-
-                                        {!video.id.startsWith('placeholder') && (
-                                            <a
-                                                href={`https://www.youtube.com/watch?v=${video.id}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="absolute bottom-4 right-4 text-xs font-bold uppercase tracking-wider text-white/80 border border-white/20 px-2 py-1 rounded bg-black/40 backdrop-blur-sm hover:bg-gold/80 hover:border-gold hover:text-black transition-all z-10"
-                                                onClick={(e) => e.stopPropagation()}
-                                            >
-                                                {t.videos.openYouTube}
-                                            </a>
-                                        )}
-
-                                        {video.id.startsWith('placeholder') && (
-                                            <span className="absolute bottom-4 right-4 text-xs font-bold uppercase tracking-wider text-white/80 border border-white/20 px-2 py-1 rounded bg-black/40 backdrop-blur-sm">
-                                                {t.videos.watch}
-                                            </span>
-                                        )}
-                                    </>
+                                    </div>
                                 )}
                             </GlassCard>
                         </motion.div>

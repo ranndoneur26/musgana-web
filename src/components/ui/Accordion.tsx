@@ -34,7 +34,7 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
                 onClick={onToggle}
                 className="flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:text-gold"
             >
-                <span className="flex-1 pr-4">
+                <span className="flex-1 pr-4 text-center md:text-left">
                     {(() => {
                         // Check if title has pattern: "YYYY-YYYY - Title. Rest of text"
                         const match = title.match(/^(\d{4}-\d{4})\s*-\s*([^.]+\.)\s*(.*)$/);

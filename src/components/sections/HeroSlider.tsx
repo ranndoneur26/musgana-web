@@ -13,17 +13,17 @@ export function HeroSlider() {
 
     // Nombres de archivos
     const slides = [
-        "/images/hero1.png",
-        "/images/hero2.png",
-        "/images/hero3.png",
-        "/images/hero4.png",
-        "/images/hero5.png",
-        "/images/hero6.png",
-        "/images/hero7.png",
-        "/images/hero8.png",
-        "/images/hero9.png",
-        "/images/hero10.png",
-        "/images/hero12.png"
+        "/images/hero1.jpg",
+        "/images/hero2.jpg",
+        "/images/hero3.jpg",
+        "/images/hero4.jpg",
+        "/images/hero5.jpg",
+        "/images/hero6.jpg",
+        "/images/hero7.jpg",
+        "/images/hero8.jpg",
+        "/images/hero9.jpg",
+        "/images/hero10.jpg",
+        "/images/hero11.jpg"
     ];
 
     useEffect(() => {
@@ -57,7 +57,7 @@ export function HeroSlider() {
                             fill
                             className="object-cover"
                             style={{
-                                objectPosition: src.includes("hero9.png") ? "center 5%" : "center center"
+                                objectPosition: src.includes("hero9.jpg") ? "center 5%" : "center center"
                             }}
                             priority={index === 0}
                         />
