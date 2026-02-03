@@ -18,11 +18,10 @@ export function VideosSection() {
                         <div className="relative w-full pb-[56.25%]">
                             <iframe
                                 className="absolute top-0 left-0 w-full h-full"
-                                src="https://www.youtube-nocookie.com/embed/RV8l4BWSDrk"
+                                src="https://www.youtube.com/embed/RV8l4BWSDrk"
                                 title="La Musgaña Video"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
-                                referrerPolicy="strict-origin-when-cross-origin"
                                 style={{ border: 0 }}
                             ></iframe>
                         </div>
