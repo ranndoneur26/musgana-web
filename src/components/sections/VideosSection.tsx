@@ -62,7 +62,7 @@ export function VideosSection() {
                         >
                             <GlassCard className="group relative aspect-video p-0 overflow-hidden hover:ring-2 hover:ring-gold/50 transition-all duration-300">
                                 {playingVideo === video.id ? (
-                                    <div className="w-full h-full bg-black">
+                                    <div className="w-full h-full bg-black relative z-20">
                                         <iframe
                                             width="100%"
                                             height="100%"
@@ -76,13 +76,14 @@ export function VideosSection() {
                                     </div>
                                 ) : (
                                     <div className="block w-full h-full relative cursor-pointer" onClick={() => setPlayingVideo(video.id)}>
-                                        <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center">
+                                        <div className="absolute inset-0 bg-black flex items-center justify-center">
                                             {video.thumbnail && (
                                                 <img
                                                     src={video.thumbnail}
                                                     alt={video.title}
                                                     className="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-105 z-0"
-                                                    padding="0"
+                                                    width="640"
+                                                    height="360"
                                                     loading="lazy"
                                                     onError={(e) => {
                                                         const target = e.target as HTMLImageElement;
@@ -93,7 +94,7 @@ export function VideosSection() {
                                                 />
                                             )}
 
-                                            <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                                            <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 pointer-events-none">
                                                 <div className="bg-black/40 rounded-full p-3 backdrop-blur-md border border-white/10 group-hover:bg-black/60 transition-colors">
                                                     <PlayCircleIcon className="w-16 h-16 text-gold drop-shadow-lg" />
                                                 </div>
