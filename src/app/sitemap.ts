@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://musgana-web.vercel.app' // Updated to Vercel URL or production domain
+    const baseUrl = 'https://musgana-web-9onp.vercel.app' // Updated to specific Vercel URL
 
     return [
         {

@@ -3,8 +3,8 @@ export function JsonLd() {
         "@context": "https://schema.org",
         "@type": "MusicGroup",
         "name": "La Musgaña",
-        "url": "https://musgana-web.vercel.app", // Replace with final production domain
-        "logo": "https://musgana-web.vercel.app/images/logo.png", // Ensure logo exists or update path
+        "url": "https://musgana-web-9onp.vercel.app",
+        "logo": "https://musgana-web-9onp.vercel.app/images/logo.png",
         "sameAs": [
             "https://www.youtube.com/results?search_query=la+musgaña",
             "https://open.spotify.com/artist/..." // Add if known
