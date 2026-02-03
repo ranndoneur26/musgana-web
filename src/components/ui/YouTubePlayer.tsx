@@ -140,7 +140,7 @@ export function YouTubePlayer({ videoId, className }: YouTubePlayerProps) {
                 <div
                     id={`youtube-player-${videoId}`}
                     ref={containerRef}
-                    className="absolute top-0 left-0 w-full h-full pointer-events-none"
+                    className="absolute top-0 left-0 w-full h-full"
                 />
             </div>
 
