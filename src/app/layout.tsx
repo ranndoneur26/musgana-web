@@ -48,6 +48,8 @@ import { SkipToContent } from "@/components/ui/SkipToContent";
 import { SessionTracker } from "@/components/ui/SessionTracker";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 
+import { JsonLd } from "@/components/seo/JsonLd";
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -59,6 +61,7 @@ export default function RootLayout({
                 <SkipToContent />
                 <SessionTracker />
                 <CookieConsent />
+                <JsonLd />
                 <main id="main-content">
                     {children}
                 </main>

@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Force dark background to match the app theme, preventing white overscroll areas */
+  --background: #022114; 
+  --foreground: #ededed;
 }
 
+/* We don't need a separate dark media query if the site is always dark-themed, 
+   but we can keep it for consistency or future proofing if we ever add a light mode switch.
+   For now, ensure the default is dark. */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #022114;
@@ -18,4 +22,12 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  /* Prevent horizontal scroll issues on mobile */
+  overflow-x: hidden;
+}
+
+html {
+    /* Ensure the background color fills the entire viewport including overscroll */
+    background-color: var(--background);
+    scroll-behavior: smooth;
 }
