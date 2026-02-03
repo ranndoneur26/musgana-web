@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
-import { YouTubePlayer } from "@/components/ui/YouTubePlayer";
 
 export function VideosSection() {
     const { t } = useTranslation();
@@ -13,21 +12,17 @@ export function VideosSection() {
                     {t.nav.videos}
                 </h2>
 
-                <div className="flex flex-col items-center">
-                    {/* Integrated Custom Player */}
-                    <YouTubePlayer videoId="RV8l4BWSDrk" className="w-full mb-12" />
-
-                    {/* External Link */}
-                    <p className="text-zinc-400 mb-6 text-sm md:text-base">{t.videos.searchVideos}</p>
+                <div className="text-center py-10">
+                    <p className="text-zinc-400 mb-8">{t.videos.searchVideos}</p>
                     <a
                         href="https://www.youtube.com/results?search_query=la+musga%C3%B1a+oficial"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors text-sm font-semibold border border-gold/30 px-6 py-2 rounded-full hover:bg-gold/10 uppercase tracking-widest"
+                        className="inline-flex items-center gap-2 text-gold hover:text-gold/80 transition-colors text-lg font-semibold border border-gold/30 px-6 py-3 rounded-full hover:bg-gold/10"
                     >
                         {t.videos.openYouTube}
                         <svg
-                            className="w-4 h-4"
+                            className="w-5 h-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
