@@ -231,7 +231,7 @@ export function ContactSection() {
                             <p className="text-sm mb-4">Oficina La Musgaña</p>
                         </div>
                         <div className="space-y-1 text-sm">
-                            <p className="hover:text-gold transition-colors cursor-pointer">lamusgana@gmail.com</p>
+                            <a href="mailto:lamusgana@gmail.com" className="block hover:text-gold transition-colors cursor-pointer">lamusgana@gmail.com</a>
                             <p>+34 918 645 080</p>
                             <p>Madrid, España</p>
                         </div>
