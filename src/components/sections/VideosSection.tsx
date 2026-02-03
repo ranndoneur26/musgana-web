@@ -18,7 +18,7 @@ export function VideosSection() {
                         <div className="relative w-full pb-[56.25%]">
                             <iframe
                                 className="absolute top-0 left-0 w-full h-full"
-                                src="https://www.youtube.com/embed/RV8l4BWSDrk"
+                                src="https://www.youtube.com/embed/RV8l4BWSDrk?playlist=mOSdUJjwrGQ"
                                 title="La Musgaña Video"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
