@@ -35,7 +35,7 @@ export function PodcastSection() {
                     <iframe
                         data-testid="embed-iframe"
                         style={{ borderRadius: "12px" }}
-                        src="https://open.spotify.com/embed/episode/2od5GbyOSppmTfCw9Dvoik?utm_source=generator"
+                        src="https://open.spotify.com/embed/episode/2od5GbyOSppmTfCw9Dvoik?utm_source=generator&t=3536"
                         width="100%"
                         height="352"
                         frameBorder="0"
