@@ -1,52 +1,110 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { ConcertCard } from "@/components/ui/ConcertCard";
 import { motion } from "framer-motion";
+
+import Image from "next/image";
+
+interface ConcertEvent {
+    title: string;
+    date: string;
+    location: string;
+    description: string;
+}
 
 export function ConcertsSection() {
     const { t } = useTranslation();
+    const [events, setEvents] = useState<ConcertEvent[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+        async function fetchEvents() {
+            try {
+                const res = await fetch('/api/calendar');
+                if (!res.ok) throw new Error('Failed to fetch');
+                const data = await res.json();
+
+                if (data.events && Array.isArray(data.events) && data.events.length > 0) {
+                    setEvents(data.events);
+                } else {
+                    // No events found, trigger fallback
+                    setError(true);
+                }
+            } catch (err) {
+                console.error(err);
+                setError(true);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchEvents();
+    }, []);
+
+    const showFallback = error || (!loading && events.length === 0);
 
     return (
-        <section className="container mx-auto px-4 py-10 md:py-20 flex flex-col items-center">
-            <div className="w-full max-w-5xl">
-                <h2 className="text-xl md:text-4xl font-semibold mb-6 md:mb-12 text-left text-gold font-[family-name:var(--font-playfair)]">
-                    {t.nav.concerts}
-                </h2>
+        <section className="container mx-auto px-4 py-4 md:py-8 flex flex-col items-center">
+            <div className="w-full max-w-5xl flex flex-row items-center justify-start -mt-12 mb-0 z-50 relative">
+                <div className="relative w-72 h-40 sm:w-80 sm:h-48 md:w-[600px] md:h-[330px] -mt-2 md:-mt-12 pointer-events-none">
+                    <Image
+                        src="/images/40-anniversari.svg"
+                        alt="40 Aniversario"
+                        fill
+                        className="object-contain object-left box-content"
+                    />
+                </div>
             </div>
 
             <motion.div
-                initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-                className="w-full max-w-5xl"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="w-full max-w-5xl -mt-12 z-10 relative"
             >
-                <GlassCard className="w-full h-[500px] p-1 md:p-4 flex flex-col group">
-                    <div className="bg-zinc-900 w-full h-full rounded-lg border border-white/5 flex items-center justify-center relative overflow-hidden opacity-60 group-hover:opacity-100 transition-all duration-500">
-                        {/* Simulated Calendar Header */}
-                        <div className="absolute top-0 left-0 right-0 h-16 bg-zinc-800 border-b border-white/5 flex items-center justify-between px-6">
-                            <div className="h-4 w-32 bg-zinc-700 rounded animate-pulse" />
-                            <div className="flex gap-2">
-                                <div className="h-8 w-8 bg-zinc-700 rounded-full" />
-                                <div className="h-8 w-8 bg-zinc-700 rounded-full" />
-                            </div>
-                        </div>
-
-                        {/* Simulated Grid */}
-                        <div className="w-full h-full pt-16 grid grid-cols-7 grid-rows-5 gap-px bg-zinc-800/50">
-                            {Array.from({ length: 35 }).map((_, i) => (
-                                <div key={i} className="bg-zinc-900 hover:bg-zinc-800/80 transition-colors" />
-                            ))}
-                        </div>
-
-                        {/* Center Message */}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                            <span className="text-2xl font-light text-zinc-500 tracking-widest mb-2">GOOGLE CALENDAR</span>
-                            <p className="text-sm text-gold animate-pulse">{t.concerts.loading}</p>
-                        </div>
+                {loading ? (
+                    <div className="w-full h-[400px] flex items-center justify-center">
+                        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gold"></div>
                     </div>
-                </GlassCard>
+                ) : showFallback ? (
+                    <GlassCard className="w-full h-[600px] p-2 md:p-4 overflow-hidden">
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?src=musgana.live%40gmail.com&ctz=Europe%2FMadrid&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&bgcolor=%23000000"
+                            style={{ border: 0 }}
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            scrolling="no"
+                            className="rounded-lg bg-zinc-900 invert-[0.9] hue-rotate-180 contrast-125 saturate-50"
+                        // Note: Invert/filter hack specifically for iframe dark mode is tricky, usually better to just let it be light or use custom styling if possible (GCal doesn't support dark mode well in embed).
+                        // Removing filters for better readability if the user didn't ask for dark mode specifically on the iframe itself, but fitting the theme.
+                        // Actually, let's keep it simple as a fallback.
+                        />
+                    </GlassCard>
+                ) : (
+                    <div className="grid grid-cols-1 gap-6">
+                        {events.map((event, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <ConcertCard
+                                    date={event.date}
+                                    title={event.title}
+                                    location={event.location}
+                                    description={event.description}
+                                />
+                            </motion.div>
+                        ))}
+                    </div>
+                )}
             </motion.div>
         </section>
     );
