@@ -35,7 +35,7 @@ export function PodcastSection() {
                     <iframe
                         data-testid="embed-iframe"
                         style={{ borderRadius: "12px" }}
-                        src="https://open.spotify.com/embed/episode/2od5GbyOSppmTfCw9Dvoik?utm_source=generator&t=3536"
+                        src="https://open.spotify.com/embed/episode/2od5GbyOSppmTfCw9Dvoik?utm_source=generator&theme=0&t=3536"
                         width="100%"
                         height="352"
                         frameBorder="0"
@@ -45,8 +45,27 @@ export function PodcastSection() {
                         title="Podcast: Inicios de La Musgaña"
                         className="w-full h-[232px] md:h-[352px]"
                     />
-                    <div className="mt-2 text-left text-xs text-white/50 pl-1">
-                        * Fragmento del podcast: 58:56 - 1:14:40. Acepte cookies si aparece el banner.
+                    <div className="mt-2 text-left text-xs pl-1">
+                        <style jsx>{`
+                            @keyframes pulse-gold {
+                                0%, 100% {
+                                    opacity: 1;
+                                    text-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+                                }
+                                50% {
+                                    opacity: 0.7;
+                                    text-shadow: 0 0 12px rgba(212, 175, 55, 1);
+                                }
+                            }
+                            .pulse-warning {
+                                animation: pulse-gold 2s ease-in-out infinite;
+                                color: #d4af37;
+                                font-weight: 500;
+                            }
+                        `}</style>
+                        <span className="pulse-warning">
+                            * Fragmento del podcast: 58:56 - 1:14:40. Acepte cookies si aparece el banner.
+                        </span>
                     </div>
                 </motion.div>
             </div>
