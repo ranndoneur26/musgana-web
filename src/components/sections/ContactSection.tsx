@@ -35,7 +35,7 @@ export function ContactSection() {
     };
 
     return (
-        <section className="container mx-auto px-4 py-10 md:py-20 flex flex-col items-center justify-center min-h-[50vh]">
+        <section className="container mx-auto px-4 py-6 md:py-10 flex flex-col items-center justify-center min-h-[40vh]">
             <div className="w-full max-w-5xl flex flex-col items-center text-center">
 
                 {/* Management Info */}

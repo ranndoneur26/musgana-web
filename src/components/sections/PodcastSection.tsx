@@ -8,7 +8,7 @@ export function PodcastSection() {
     const { t } = useTranslation();
 
     return (
-        <section className="container mx-auto px-4 py-8 md:py-16 relative z-30">
+        <section className="container mx-auto px-4 py-4 md:py-8 relative z-30">
             <div className="max-w-5xl mx-auto flex flex-col items-start text-left">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
