@@ -18,10 +18,10 @@ export function PodcastSection() {
                     className="mb-6 w-full"
                 >
                     <h2 className="text-xl md:text-3xl font-semibold mb-2 text-gold font-[family-name:var(--font-playfair)] tracking-wide">
-                        Inicios de La Musgaña
+                        {t.podcast.title}
                     </h2>
                     <p className="text-sm md:text-lg text-zinc-300 font-light italic">
-                        Contado por Rafa Martín, en el podcast &quot;Van Por el Aire&quot; de Diariofolk
+                        {t.podcast.subtitle}
                     </p>
                 </motion.div>
 
@@ -64,7 +64,7 @@ export function PodcastSection() {
                             }
                         `}</style>
                         <span className="pulse-warning">
-                            * Fragmento del podcast: 58:56 - 1:14:40. Acepte cookies si aparece el banner.
+                            {t.podcast.helperText}
                         </span>
                     </div>
                 </motion.div>

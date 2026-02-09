@@ -32,9 +32,27 @@ const dictionary = {
             watch: "Ver Vídeo",
             searchVideos: "Buscar más videos",
             openYouTube: "Abrir en YouTube",
+            playlistTitle: "Lista de Reproducción",
+            items: {
+                v1: "Briana",
+                v2: "Fiestas de San Isidro 2022",
+                v3: "Festival on the Green 1997",
+            }
         },
         sections: {
             discography: "Discografía",
+            liveHistory: "Conciertos del Recuerdo",
+        },
+        liveHistory: {
+            title: "El Viaje Dorado | Conciertos en directo",
+            columns: {
+                date: "Fecha",
+                location: "Población / País",
+                venue: "Lugar",
+                notes: "Festival / Ciclo / Notas",
+            },
+            footerNote: "Estos son sólo algunos de los conciertos rescatados del baúl",
+            accordionTitle: "Listado Histórico de Conciertos",
         },
         concerts: {
             calendar: "Calendario de Conciertos",
@@ -61,6 +79,11 @@ const dictionary = {
             accept: "Aceptar",
             decline: "Configurar",
             settingsTitle: "Preferencias de Cookies",
+        },
+        podcast: {
+            title: "Inicios de La Musgaña",
+            subtitle: "Contado por Rafa Martín, en el podcast \"Van Por el Aire\" de Diariofolk",
+            helperText: "* Fragmento del podcast: 58:56 - 1:14:40. Acepte cookies si aparece el banner.",
         },
     },
     en: {
@@ -93,9 +116,27 @@ const dictionary = {
             watch: "Watch Video",
             searchVideos: "Search for more videos",
             openYouTube: "Open in YouTube",
+            playlistTitle: "Playlist",
+            items: {
+                v1: "Briana",
+                v2: "San Isidro Festival 2022",
+                v3: "Festival on the Green 1997",
+            }
         },
         sections: {
             discography: "Discography",
+            liveHistory: "Concerts of the Past",
+        },
+        liveHistory: {
+            title: "The Golden Journey | Live Concerts",
+            columns: {
+                date: "Date",
+                location: "Town / Country",
+                venue: "Venue",
+                notes: "Festival / Cycle / Notes",
+            },
+            footerNote: "These are just some of the concerts rescued from the archives",
+            accordionTitle: "Historical Concert List",
         },
         concerts: {
             calendar: "Concerts Calendar",
@@ -122,6 +163,11 @@ const dictionary = {
             accept: "Accept",
             decline: "Settings",
             settingsTitle: "Cookie Preferences",
+        },
+        podcast: {
+            title: "The Beginnings of La Musgaña",
+            subtitle: "Told by Rafa Martín, in the podcast \"Van Por el Aire\" by Diariofolk (Only in Spanish)",
+            helperText: "* Podcast excerpt: 58:56 - 1:14:40. Accept cookies if banner appears.",
         },
     },
 };
