@@ -55,7 +55,7 @@ export function ContactSection() {
                         <h3 className="text-white font-bold mb-2 opacity-50 text-base tracking-widest uppercase">Management & Booking</h3>
                         <p className="text-base mb-6 uppercase tracking-widest text-gold/80">Oficina La Musgaña</p>
                     </div>
-                    <div className="space-y-1 text-base">
+                    <div className="space-y-0.5 text-base">
                         <a href="mailto:lamusgana@gmail.com" className="block hover:text-gold transition-colors cursor-pointer text-base">lamusgana@gmail.com</a>
                         <p className="text-base">+34 918 645 080</p>
                         <p className="uppercase tracking-widest text-xs opacity-60">Madrid, España</p>

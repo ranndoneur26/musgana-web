@@ -1,0 +1,752 @@
+[
+    {
+        "date": "2025-11-14",
+        "location": {
+            "es": "Dublín (Sandymount), Irlanda",
+            "en": "Dublín (Sandymount), Irlanda"
+        },
+        "venue": {
+            "es": "Sandymount Community Centre",
+            "en": "Sandymount Community Centre"
+        },
+        "notes": {
+            "es": "Concierto La Musgaña + Cormac Breatnach & Martin Dunlea (Instituto Cervantes Dublín).",
+            "en": "Concierto La Musgaña + Cormac Breatnach & Martin Dunlea (Instituto Cervantes Dublín)."
+        }
+    },
+    {
+        "date": "2025-10-04",
+        "location": {
+            "es": "Garganta de los Montes, España",
+            "en": "Garganta de los Montes, España"
+        },
+        "venue": {
+            "es": "Auditorio municipal",
+            "en": "Auditorio municipal"
+        },
+        "notes": {
+            "es": "Concierto de Fetén Fetén con La Musgaña como invitados.",
+            "en": "Concierto de Fetén Fetén con La Musgaña como invitados."
+        }
+    },
+    {
+        "date": "2024-02-04",
+        "location": {
+            "es": "Madrid, España",
+            "en": "Madrid, España"
+        },
+        "venue": {
+            "es": "Teatro Circo Price",
+            "en": "Teatro Circo Price"
+        },
+        "notes": {
+            "es": "Inverfest 2024 – Concierto “Raíces” (Fetén Fetén & La Musgaña).",
+            "en": "Inverfest 2024 – Concierto “Raíces” (Fetén Fetén & La Musgaña)."
+        }
+    },
+    {
+        "date": "2023-09-16",
+        "location": {
+            "es": "Cartagena, España",
+            "en": "Cartagena, España"
+        },
+        "venue": {
+            "es": "Nuevo Teatro Circo",
+            "en": "Nuevo Teatro Circo"
+        },
+        "notes": {
+            "es": "Obra “Cid” (Albacity) con música en directo de La Musgaña.",
+            "en": "Obra “Cid” (Albacity) con música en directo de La Musgaña."
+        }
+    },
+    {
+        "date": "2023-08-26",
+        "location": {
+            "es": "Santa Marta de Tormes, España",
+            "en": "Santa Marta de Tormes, España"
+        },
+        "venue": {
+            "es": "Plaza de España",
+            "en": "Plaza de España"
+        },
+        "notes": {
+            "es": "VI Volatiritormes – apertura con “Cid” (Antonio Campos + La Musgaña).",
+            "en": "VI Volatiritormes – apertura con “Cid” (Antonio Campos + La Musgaña)."
+        }
+    },
+    {
+        "date": "2023-04-29",
+        "location": {
+            "es": "Guadalupe (Murcia), España",
+            "en": "Guadalupe (Murcia), España"
+        },
+        "venue": {
+            "es": "Auditorio Municipal",
+            "en": "Auditorio Municipal"
+        },
+        "notes": {
+            "es": "Festival Lupefolk 2023 – estreno regional “Cid”.",
+            "en": "Festival Lupefolk 2023 – estreno regional “Cid”."
+        }
+    },
+    {
+        "date": "2022-08-27",
+        "location": {
+            "es": "Ciudad Rodrigo, España",
+            "en": "Ciudad Rodrigo, España"
+        },
+        "venue": {
+            "es": "Nuevo Teatro Fernando Arrabal",
+            "en": "Nuevo Teatro Fernando Arrabal"
+        },
+        "notes": {
+            "es": "XXV Feria de Teatro de Castilla y León – “Cid”.",
+            "en": "XXV Feria de Teatro de Castilla y León – “Cid”."
+        }
+    },
+    {
+        "date": "2022-08-05",
+        "location": {
+            "es": "Sendim, Portugal",
+            "en": "Sendim, Portugal"
+        },
+        "venue": {
+            "es": "Palco Inatel",
+            "en": "Palco Inatel"
+        },
+        "notes": {
+            "es": "Festival Intercéltico de Sendim – La Musgaña & Vanesa Muela.",
+            "en": "Festival Intercéltico de Sendim – La Musgaña & Vanesa Muela."
+        }
+    },
+    {
+        "date": "2022-05-27",
+        "location": {
+            "es": "Trujillo, España",
+            "en": "Trujillo, España"
+        },
+        "venue": {
+            "es": "Plaza Mayor",
+            "en": "Plaza Mayor"
+        },
+        "notes": {
+            "es": "Proclamación Red de Pueblos más Bonitos de España – concierto Acetre con La Musgaña.",
+            "en": "Proclamación Red de Pueblos más Bonitos de España – concierto Acetre con La Musgaña."
+        }
+    },
+    {
+        "date": "2022-05-09",
+        "location": {
+            "es": "Madrid, España",
+            "en": "Madrid, España"
+        },
+        "venue": {
+            "es": "Pradera de San Isidro",
+            "en": "Pradera de San Isidro"
+        },
+        "notes": {
+            "es": "Fiestas de San Isidro 2022 – concierto de La Musgaña.",
+            "en": "Fiestas de San Isidro 2022 – concierto de La Musgaña."
+        }
+    },
+    {
+        "date": "2022-02-11",
+        "location": {
+            "es": "Murcia, España",
+            "en": "Murcia, España"
+        },
+        "venue": {
+            "es": "Auditorio Víctor Villegas",
+            "en": "Auditorio Víctor Villegas"
+        },
+        "notes": {
+            "es": "FolkFest Región de Murcia 2022 – La Musgaña & Vanesa Muela.",
+            "en": "FolkFest Región de Murcia 2022 – La Musgaña & Vanesa Muela."
+        }
+    },
+    {
+        "date": "2021-08-20",
+        "location": {
+            "es": "Irún/Hondarribia, España",
+            "en": "Irún/Hondarribia, España"
+        },
+        "venue": {
+            "es": "Kasino Zaharra",
+            "en": "Kasino Zaharra"
+        },
+        "notes": {
+            "es": "Bidasoa Folk 2021 – “Tres x cuatro”, La Musgaña & Vanesa Muela.",
+            "en": "Bidasoa Folk 2021 – “Tres x cuatro”, La Musgaña & Vanesa Muela."
+        }
+    },
+    {
+        "date": "2020-11-06",
+        "location": {
+            "es": "Rojales, España",
+            "en": "Rojales, España"
+        },
+        "venue": {
+            "es": "Teatro Capitol",
+            "en": "Teatro Capitol"
+        },
+        "notes": {
+            "es": "XII Festival Músicas sin Fronteras – presentación “Raitán”.",
+            "en": "XII Festival Músicas sin Fronteras – presentación “Raitán”."
+        }
+    },
+    {
+        "date": "2020-07-18",
+        "location": {
+            "es": "Segovia, España",
+            "en": "Segovia, España"
+        },
+        "venue": {
+            "es": "Jardín de los Zuloaga",
+            "en": "Jardín de los Zuloaga"
+        },
+        "notes": {
+            "es": "Ciclo “Segovia, un oasis de Cultura” – Noche de Folk, La Musgaña.",
+            "en": "Ciclo “Segovia, un oasis de Cultura” – Noche de Folk, La Musgaña."
+        }
+    },
+    {
+        "date": "2020-02-03",
+        "location": {
+            "es": "Rojales, España",
+            "en": "Rojales, España"
+        },
+        "venue": {
+            "es": "Teatro Capitol",
+            "en": "Teatro Capitol"
+        },
+        "notes": {
+            "es": "XIII Festival Músicas sin Fronteras – La Musgaña (trío) presenta 'Raitán'.",
+            "en": "XIII Festival Músicas sin Fronteras – La Musgaña (trío) presenta 'Raitán'."
+        }
+    },
+    {
+        "date": "2019-10-25",
+        "location": {
+            "es": "León, España",
+            "en": "León, España"
+        },
+        "venue": {
+            "es": "Teatro San Francisco",
+            "en": "Teatro San Francisco"
+        },
+        "notes": {
+            "es": "Concierto “Raitán” – presentación de disco.",
+            "en": "Concierto “Raitán” – presentación de disco."
+        }
+    },
+    {
+        "date": "2019-04-27",
+        "location": {
+            "es": "Valdemorillo (Madrid), España",
+            "en": "Valdemorillo (Madrid), España"
+        },
+        "venue": {
+            "es": "Recinto Folkarria",
+            "en": "Recinto Folkarria"
+        },
+        "notes": {
+            "es": "Folkarria Eco Festi-bal 2019 – concierto La Musgaña.",
+            "en": "Folkarria Eco Festi-bal 2019 – concierto La Musgaña."
+        }
+    },
+    {
+        "date": "2019-03-16",
+        "location": {
+            "es": "Guadalupe (Murcia), España",
+            "en": "Guadalupe (Murcia), España"
+        },
+        "venue": {
+            "es": "Auditorio Municipal",
+            "en": "Auditorio Municipal"
+        },
+        "notes": {
+            "es": "XII Festival Lupefolk – concierto La Musgaña.",
+            "en": "XII Festival Lupefolk – concierto La Musgaña."
+        }
+    },
+    {
+        "date": "2018-08-13",
+        "location": {
+            "es": "Madrid, España",
+            "en": "Madrid, España"
+        },
+        "venue": {
+            "es": "Sala Galileo Galilei",
+            "en": "Sala Galileo Galilei"
+        },
+        "notes": {
+            "es": "Concierto La Musgaña – nueva etapa en trío con L. A. Pedraza.",
+            "en": "Concierto La Musgaña – nueva etapa en trío con L. A. Pedraza."
+        }
+    },
+    {
+        "date": "2018-07-17",
+        "location": {
+            "es": "Cuenca, España",
+            "en": "Cuenca, España"
+        },
+        "venue": {
+            "es": "Plaza de la Merced",
+            "en": "Plaza de la Merced"
+        },
+        "notes": {
+            "es": "Veranos en Cuenca 2018 – “30 años de folk ibérico” (La Musgaña).",
+            "en": "Veranos en Cuenca 2018 – “30 años de folk ibérico” (La Musgaña)."
+        }
+    },
+    {
+        "date": "2017-05-06",
+        "location": {
+            "es": "Xàbia/Jávea, España",
+            "en": "Xàbia/Jávea, España"
+        },
+        "venue": {
+            "es": "Plaça de la Constitució",
+            "en": "Plaça de la Constitució"
+        },
+        "notes": {
+            "es": "XVI Festival Xàbia Folk – La Musgaña.",
+            "en": "XVI Festival Xàbia Folk – La Musgaña."
+        }
+    },
+    {
+        "date": "2017-02-03",
+        "location": {
+            "es": "San Martín de Valdeiglesias, España",
+            "en": "San Martín de Valdeiglesias, España"
+        },
+        "venue": {
+            "es": "Centro Cultural Santa Catalina",
+            "en": "Centro Cultural Santa Catalina"
+        },
+        "notes": {
+            "es": "Concierto “Entre dos” – La Musgaña.",
+            "en": "Concierto “Entre dos” – La Musgaña."
+        }
+    },
+    {
+        "date": "2016-05-27",
+        "location": {
+            "es": "Trujillo, España",
+            "en": "Trujillo, España"
+        },
+        "venue": {
+            "es": "Plaza Mayor",
+            "en": "Plaza Mayor"
+        },
+        "notes": {
+            "es": "40º aniversario de Acetre – concierto Acetre con La Musgaña.",
+            "en": "40º aniversario de Acetre – concierto Acetre con La Musgaña."
+        }
+    },
+    {
+        "date": "2016-05-20",
+        "location": {
+            "es": "Madrid, España",
+            "en": "Madrid, España"
+        },
+        "venue": {
+            "es": "Centro Cultural Conde Duque",
+            "en": "Centro Cultural Conde Duque"
+        },
+        "notes": {
+            "es": "Concierto 30 aniversario dentro del proyecto “LaborArte”.",
+            "en": "Concierto 30 aniversario dentro del proyecto “LaborArte”."
+        }
+    },
+    {
+        "date": "2016-01-23",
+        "location": {
+            "es": "Sigüenza, España",
+            "en": "Sigüenza, España"
+        },
+        "venue": {
+            "es": "Auditorio de El Pósito",
+            "en": "Auditorio de El Pósito"
+        },
+        "notes": {
+            "es": "IV Segontia Folk – La Musgaña & Landeral.",
+            "en": "IV Segontia Folk – La Musgaña & Landeral."
+        }
+    },
+    {
+        "date": "2015-08-20",
+        "location": {
+            "es": "Plasencia, España",
+            "en": "Plasencia, España"
+        },
+        "venue": {
+            "es": "Plaza Mayor/Torre Lucía",
+            "en": "Plaza Mayor/Torre Lucía"
+        },
+        "notes": {
+            "es": "XX Festival Internacional Folk Plasencia – Noa, La Musgaña, Mansaborá Folk, etc.",
+            "en": "XX Festival Internacional Folk Plasencia – Noa, La Musgaña, Mansaborá Folk, etc."
+        }
+    },
+    {
+        "date": "2014-02-07",
+        "location": {
+            "es": "San Sebastián de los Reyes, España",
+            "en": "San Sebastián de los Reyes, España"
+        },
+        "venue": {
+            "es": "Centro Cultural Pablo Iglesias",
+            "en": "Centro Cultural Pablo Iglesias"
+        },
+        "notes": {
+            "es": "Ciclo “Los Viernes de la Tradición” – La Musgaña + Cormac Breatnach.",
+            "en": "Ciclo “Los Viernes de la Tradición” – La Musgaña + Cormac Breatnach."
+        }
+    },
+    {
+        "date": "2013-11-29",
+        "location": {
+            "es": "Ponferrada, España",
+            "en": "Ponferrada, España"
+        },
+        "venue": {
+            "es": "Teatro Bergidum",
+            "en": "Teatro Bergidum"
+        },
+        "notes": {
+            "es": "Presentación disco “Entre dos”.",
+            "en": "Presentación disco “Entre dos”."
+        }
+    },
+    {
+        "date": "2013-11-08",
+        "location": {
+            "es": "Arenas de San Pedro, España",
+            "en": "Arenas de San Pedro, España"
+        },
+        "venue": {
+            "es": "Sala El Balcón",
+            "en": "Sala El Balcón"
+        },
+        "notes": {
+            "es": "Gira “Entre dos” – La Musgaña.",
+            "en": "Gira “Entre dos” – La Musgaña."
+        }
+    },
+    {
+        "date": "2013-11 (varios días)",
+        "location": {
+            "es": "Ourense, Lugo, O Porriño, Bueu (España)",
+            "en": "Ourense, Lugo, O Porriño, Bueu (España)"
+        },
+        "venue": {
+            "es": "Auriense, Clavicémbalo, Bar Liceum, Aturuxo",
+            "en": "Auriense, Clavicémbalo, Bar Liceum, Aturuxo"
+        },
+        "notes": {
+            "es": "Gira gallega “Entre dos” – La Musgaña.",
+            "en": "Gira gallega “Entre dos” – La Musgaña."
+        }
+    },
+    {
+        "date": "2012-07 (emitido 2012-05-25)",
+        "location": {
+            "es": "Lanuza (Huesca), España",
+            "en": "Lanuza (Huesca), España"
+        },
+        "venue": {
+            "es": "Festival Pirineos Sur",
+            "en": "Festival Pirineos Sur"
+        },
+        "notes": {
+            "es": "Concierto La Musgaña + Kroke (grabación RNE).",
+            "en": "Concierto La Musgaña + Kroke (grabación RNE)."
+        }
+    },
+    {
+        "date": "2009-10-23 aprox.",
+        "location": {
+            "es": "Madrid, España",
+            "en": "Madrid, España"
+        },
+        "venue": {
+            "es": "Teatro de Madrid / festival MadridFolk",
+            "en": "Teatro de Madrid / festival MadridFolk"
+        },
+        "notes": {
+            "es": "Concierto “Idas y venidas en directo” – La Musgaña.",
+            "en": "Concierto “Idas y venidas en directo” – La Musgaña."
+        }
+    },
+    {
+        "date": "2009-10-xx",
+        "location": {
+            "es": "Moscú, Rusia",
+            "en": "Moscú, Rusia"
+        },
+        "venue": {
+            "es": "Filarmonía Estatal de Moscú (indicativo)",
+            "en": "Filarmonía Estatal de Moscú (indicativo)"
+        },
+        "notes": {
+            "es": "Mención en calendario de conciertos como “Ансамбль «Ла Мусганья» (España)” (fecha exacta no visible).",
+            "en": "Mención en calendario de conciertos como “Ансамбль «Ла Мусганья» (España)” (fecha exacta no visible)."
+        }
+    },
+    {
+        "date": "2008-09-22",
+        "location": {
+            "es": "Chicago, EE. UU.",
+            "en": "Chicago, EE. UU."
+        },
+        "venue": {
+            "es": "Claudia Cassidy Theater",
+            "en": "Claudia Cassidy Theater"
+        },
+        "notes": {
+            "es": "10th World Music Festival Chicago – La Musgaña (concierto y emisión en WNUR).",
+            "en": "10th World Music Festival Chicago – La Musgaña (concierto y emisión en WNUR)."
+        }
+    },
+    {
+        "date": "2007-02-24 aprox.",
+        "location": {
+            "es": "Memphis, EE. UU.",
+            "en": "Memphis, EE. UU."
+        },
+        "venue": {
+            "es": "Varios recintos",
+            "en": "Varios recintos"
+        },
+        "notes": {
+            "es": "Folk Alliance Conference 2007 – showcases de La Musgaña.",
+            "en": "Folk Alliance Conference 2007 – showcases de La Musgaña."
+        }
+    },
+    {
+        "date": "2007-01-24",
+        "location": {
+            "es": "Washington D. C., EE. UU.",
+            "en": "Washington D. C., EE. UU."
+        },
+        "venue": {
+            "es": "Kennedy Center Millennium Stage",
+            "en": "Kennedy Center Millennium Stage"
+        },
+        "notes": {
+            "es": "Concierto La Musgaña – gira USA/Canadá (16 enero–9 febrero).",
+            "en": "Concierto La Musgaña – gira USA/Canadá (16 enero–9 febrero)."
+        }
+    },
+    {
+        "date": "2006‑2008 (sin fechas)",
+        "location": {
+            "es": "Italia, Francia, EE. UU.",
+            "en": "Italia, Francia, EE. UU."
+        },
+        "venue": {
+            "es": "Varios",
+            "en": "Varios"
+        },
+        "notes": {
+            "es": "Giras internacionales tras la etapa 1986‑2004 (indicadas en dossiers/biografías).",
+            "en": "Giras internacionales tras la etapa 1986‑2004 (indicadas en dossiers/biografías)."
+        }
+    },
+    {
+        "date": "2002-07-12",
+        "location": {
+            "es": "Ortigueira (Galicia), España",
+            "en": "Ortigueira (Galicia), España"
+        },
+        "venue": {
+            "es": "Festival de Ortigueira",
+            "en": "Festival de Ortigueira"
+        },
+        "notes": {
+            "es": "Participaron junto a Carlos Núñez, Liam O'Flynn, Akelarre Agrocelta y Kepa Junkera.",
+            "en": "Participaron junto a Carlos Núñez, Liam O'Flynn, Akelarre Agrocelta y Kepa Junkera."
+        }
+    },
+    {
+        "date": "1999-07 (año aprox.)",
+        "location": {
+            "es": "Dénia, España",
+            "en": "Dénia, España"
+        },
+        "venue": {
+            "es": "Castillo",
+            "en": "Castillo"
+        },
+        "notes": {
+            "es": "Festival “Música al Castell” – La Musgaña.",
+            "en": "Festival “Música al Castell” – La Musgaña."
+        }
+    },
+    {
+        "date": "1998-05-15",
+        "location": {
+            "es": "Barcelona, Catalunya (España)",
+            "en": "Barcelona, Catalunya (Spain)"
+        },
+        "venue": {
+            "es": "Centre Artesà Tradicionàrius (Gràcia)",
+            "en": "Centre Artesà Tradicionàrius (Gràcia)"
+        },
+        "notes": {
+            "es": "Concierto de La Musgaña en el marco del cicle Tradicionàrius",
+            "en": "Concert by La Musgaña within the Tradicionàrius cycle"
+        }
+    },
+    {
+        "date": "1997 (varios conciertos)",
+        "location": {
+            "es": "Madrid, Barakaldo… (España)",
+            "en": "Madrid, Barakaldo… (España)"
+        },
+        "venue": {
+            "es": "Varios teatros",
+            "en": "Varios teatros"
+        },
+        "notes": {
+            "es": "Gira 10.º aniversario y grabación del disco “En Concierto” con invitados (Kepa Junkera, Radio Tarifa, Amancio Prada, Johnny Cunningham…).",
+            "en": "Gira 10.º aniversario y grabación del disco “En Concierto” con invitados (Kepa Junkera, Radio Tarifa, Amancio Prada, Johnny Cunningham…)."
+        }
+    },
+    {
+        "date": "1992‑1999 (múltiples años)",
+        "location": {
+            "es": "Bloomington, Indiana (EE. UU.)",
+            "en": "Bloomington, Indiana (EE. UU.)"
+        },
+        "venue": {
+            "es": "Varios espacios downtown",
+            "en": "Varios espacios downtown"
+        },
+        "notes": {
+            "es": "Participación en varias ediciones del Lotus World Music & Arts Festival (según archivos y biografías).",
+            "en": "Participación en varias ediciones del Lotus World Music & Arts Festival (según archivos y biografías)."
+        }
+    },
+    {
+        "date": "1992‑1999 (múltiples años)",
+        "location": {
+            "es": "Edmonton, Alberta (Canadá)",
+            "en": "Edmonton, Alberta (Canadá)"
+        },
+        "venue": {
+            "es": "Gallagher Park",
+            "en": "Gallagher Park"
+        },
+        "notes": {
+            "es": "Edmonton Folk Music Festival – presencia en archivo de artistas históricos.",
+            "en": "Edmonton Folk Music Festival – presencia en archivo de artistas históricos."
+        }
+    },
+    {
+        "date": "1992 (sin día)",
+        "location": {
+            "es": "Varios estados, EE. UU.",
+            "en": "Varios estados, EE. UU."
+        },
+        "venue": {
+            "es": "Varios recintos",
+            "en": "Varios recintos"
+        },
+        "notes": {
+            "es": "Primera gira norteamericana tras lanzamiento de “Lubicán” (Xenophile/Green Linnet).",
+            "en": "Primera gira norteamericana tras lanzamiento de “Lubicán” (Xenophile/Green Linnet)."
+        }
+    },
+    {
+        "date": "1991-07-?",
+        "location": {
+            "es": "Vilanova i la Geltrú, Catalunya (España)",
+            "en": "Vilanova i la Geltrú, Catalunya (Spain)"
+        },
+        "venue": {
+            "es": "Escenario FIMPT (zona marítima)",
+            "en": "FIMPT Stage (maritime zone)"
+        },
+        "notes": {
+            "es": "11è FIMPT – Festival Internacional de Música Popular Tradicional. El cartel de la 11.ª edición incluye explícitamente “LA MUSGAÑA” junto a La Bandalpina y La Principal del Baridà, entre otros.",
+            "en": "11th FIMPT – International Traditional Folk Music Festival. The 11th edition poster explicitly includes “LA MUSGAÑA” alongside La Bandalpina and La Principal del Baridà, among others."
+        }
+    },
+    {
+        "date": "1990‑1993 (múltiples años)",
+        "location": {
+            "es": "Orillia, Ontario (Canadá)",
+            "en": "Orillia, Ontario (Canadá)"
+        },
+        "venue": {
+            "es": "Recinto del festival",
+            "en": "Recinto del festival"
+        },
+        "notes": {
+            "es": "Mariposa Folk Festival – citado en archivos del festival.",
+            "en": "Mariposa Folk Festival – citado en archivos del festival."
+        }
+    },
+    {
+        "date": "Década 1990",
+        "location": {
+            "es": "Vancouver, Canadá",
+            "en": "Vancouver, Canadá"
+        },
+        "venue": {
+            "es": "Jericho Beach Park",
+            "en": "Jericho Beach Park"
+        },
+        "notes": {
+            "es": "Vancouver Folk Music Festival – incluida en listado histórico de artistas 1990.",
+            "en": "Vancouver Folk Music Festival – incluida en listado histórico de artistas 1990."
+        }
+    },
+    {
+        "date": "Años 1990‑2000 aprox.",
+        "location": {
+            "es": "Lorient, Francia",
+            "en": "Lorient, Francia"
+        },
+        "venue": {
+            "es": "Varios escenarios",
+            "en": "Varios escenarios"
+        },
+        "notes": {
+            "es": "Festival Interceltique de Lorient – biografías citan su paso por el festival.",
+            "en": "Festival Interceltique de Lorient – biografías citan su paso por el festival."
+        }
+    },
+    {
+        "date": "1988 (sin día)",
+        "location": {
+            "es": "Santiago de Compostela, España",
+            "en": "Santiago de Compostela, España"
+        },
+        "venue": {
+            "es": "Muestra Nacional de Folk",
+            "en": "Muestra Nacional de Folk"
+        },
+        "notes": {
+            "es": "Ganadores del 1.er Premio Folk Actual (Jóvenes Intérpretes).",
+            "en": "Ganadores del 1.er Premio Folk Actual (Jóvenes Intérpretes)."
+        }
+    },
+    {
+        "date": "1986",
+        "location": {
+            "es": "Madrid (Hortaleza), España",
+            "en": "Madrid (Hortaleza), España"
+        },
+        "venue": {
+            "es": "Formación del grupo y ensayos intensivos",
+            "en": "Formación del grupo y ensayos intensivos"
+        },
+        "notes": {
+            "es": "Fundación de La Musgaña (Quique Almendros, J. M. Climent, R. Martín, J. Muñoz, C. Beceiro).",
+            "en": "Fundación de La Musgaña (Quique Almendros, J. M. Climent, R. Martín, J. Muñoz, C. Beceiro)."
+        }
+    }
+]
