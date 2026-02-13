@@ -31,3 +31,8 @@ ts-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.env.local.bak
+.npm-cache/
+.deploy_clean_v*/
+.vercel-config/
+deploy_clean_v*/

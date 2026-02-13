@@ -21,26 +21,89 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-    title: "La Musgaña - Folk Ibérico Contemporáneo | 40 Aniversario",
-    description: "Web oficial del grupo de folk La Musgaña. 40 años de música tradicional castellana y leonesa. Descubre nuestra discografía, historia y próximos conciertos.",
-    keywords: ["La Musgaña", "folk español", "música tradicional", "Castilla y León", "folk ibérico", "gaita", "zanfona"],
+    title: "La Musgaña - Grupo de Música Folk Española | Folk Ibérico Contemporáneo",
+    description:
+        "Web oficial de La Musgaña, grupo de música folk española y folk castellano y leonés. Más de 35 años interpretando música tradicional de Castilla y León con gaita sanabresa, zanfona, flauta de tres agujeros y tamboril. Discografía: Raitán, Temas Profanos, En Concierto. Contratar La Musgaña para festivales y eventos.",
+    keywords: [
+        // Marca ES
+        "La Musgaña",
+        "La Musgaña conciertos",
+        "La Musgaña discografía",
+        "La Musgaña Raitán",
+        "La Musgaña Temas Profanos",
+        "La Musgaña En Concierto",
+        // Género ES
+        "grupo de música folk española",
+        "folk castellano",
+        "folk castellano y leonés",
+        "música tradicional de Castilla y León",
+        "folk ibérico",
+        "músicas de la península ibérica",
+        // Instrumentos ES
+        "gaita sanabresa",
+        "zanfona",
+        "flauta de tres agujeros y tamboril",
+        "bouzouki en folk",
+        "accordion folk",
+        // Contratación ES
+        "contratar La Musgaña",
+        "La Musgaña booking",
+        "La Musgaña caché",
+        // LatAm / ES genérico
+        "música folk española",
+        "música tradicional española",
+        "folk de Castilla y León",
+        "música tradicional ibérica",
+        "world music española",
+        "músicas del mundo España",
+        "folk europeo España",
+        // Marca EN
+        "La Musgaña band",
+        "La Musgaña album",
+        "La Musgaña live",
+        "La Musgaña discography",
+        // Género EN
+        "Spanish folk band",
+        "Iberian folk music",
+        "Castilian traditional music",
+        "traditional music from Spain",
+        "folk music from Castile and León",
+        // World music EN
+        "Spanish world music band",
+        "Iberian world music",
+        "European world music Spain",
+        // Instrumentos EN
+        "hurdy-gurdy Spanish folk",
+        "Spanish bagpipes folk",
+        "traditional flute and tabor Spain",
+    ],
     authors: [{ name: "La Musgaña" }],
     openGraph: {
-        title: "La Musgaña - 40 Aniversario",
-        description: "40 años de folk ibérico contemporáneo. Música tradicional castellana y leonesa.",
+        title: "La Musgaña - Grupo de Música Folk Española | Folk Ibérico",
+        description:
+            "Más de 35 años de folk ibérico contemporáneo. Música tradicional castellana y leonesa con gaita sanabresa, zanfona y flauta de tres agujeros. Discografía, conciertos y contratación.",
         type: "website",
         locale: "es_ES",
         alternateLocale: "en_US",
         siteName: "La Musgaña",
+        url: "https://musgana-web-9onp.vercel.app",
     },
     twitter: {
         card: "summary_large_image",
-        title: "La Musgaña - Folk Ibérico Contemporáneo",
-        description: "40 años de música tradicional castellana y leonesa",
+        title: "La Musgaña - Spanish Folk Band | Iberian Folk Music",
+        description:
+            "Official site of La Musgaña. Traditional music from Castile and León with hurdy-gurdy, Spanish bagpipes, and flute & tabor. Discography, live concerts & booking.",
     },
     robots: {
         index: true,
         follow: true,
+    },
+    alternates: {
+        canonical: "https://musgana-web-9onp.vercel.app",
+        languages: {
+            "es": "https://musgana-web-9onp.vercel.app/es",
+            "en": "https://musgana-web-9onp.vercel.app/en",
+        },
     },
 };
 

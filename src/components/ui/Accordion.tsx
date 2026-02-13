@@ -71,10 +71,16 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
                         }}
                         transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
-                        <div
-                            className="text-left text-zinc-400 max-w-none [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [& strong]:text-gold"
-                            dangerouslySetInnerHTML={{ __html: String(children) }}
-                        />
+                        {typeof children === 'string' ? (
+                            <div
+                                className="text-left text-zinc-400 max-w-none [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [& strong]:text-gold"
+                                dangerouslySetInnerHTML={{ __html: children }}
+                            />
+                        ) : (
+                            <div className="text-left text-zinc-400 max-w-none">
+                                {children}
+                            </div>
+                        )}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -83,7 +89,7 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
 }
 
 interface AccordionProps {
-    items: { id: string; title: string; content: string }[];
+    items: { id: string; title: string; content: string | React.ReactNode }[];
     className?: string;
 }
 

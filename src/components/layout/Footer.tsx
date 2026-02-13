@@ -30,7 +30,7 @@ export function Footer() {
                 {/* Social Icons */}
                 <div className="flex items-center gap-6">
                     <Link href="https://www.youtube.com/results?search_query=la+musgaña" target="_blank" className="text-zinc-400 hover:text-gold transition-colors flex items-center gap-2">
-                        <Youtube size={24} />
+                        <Youtube size={12} />
                         <span className="text-sm font-medium tracking-widest uppercase">YouTube</span>
                     </Link>
                 </div>

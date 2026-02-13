@@ -1,4 +1,15 @@
+.DS_Store
 node_modules
 .next
 .git
+.vercel
+.npm-cache
+.npm_cache
+tmp_sips
+test.png
+AUDIT_REPORT.md
+deploy_*
 .env.local
+.env.local.bak
+.antigravityignore
+.agent

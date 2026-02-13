@@ -50,7 +50,7 @@ export function ConcertsSection() {
     return (
         <section className="container mx-auto px-4 py-4 md:py-8 flex flex-col items-center">
             <div className="w-full max-w-5xl flex flex-row items-center justify-start -mt-12 mb-0 z-50 relative">
-                <div className="relative w-[331px] h-[184px] sm:w-[368px] sm:h-[221px] md:w-[690px] md:h-[380px] -mt-2 md:-mt-12 pointer-events-none">
+                <div className="relative w-[331px] h-[184px] sm:w-[368px] sm:h-[221px] md:w-[690px] md:h-[380px] -mt-2 md:-mt-12 pointer-events-none scale-[1.2]">
                     <Image
                         src="/images/40-anniversari.svg"
                         alt="40 Aniversario"

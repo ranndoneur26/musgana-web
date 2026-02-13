@@ -4,7 +4,7 @@
 
 :root {
   /* Force dark background to match the app theme, preventing white overscroll areas */
-  --background: #022114; 
+  --background: #022114;
   --foreground: #ededed;
 }
 
@@ -27,7 +27,25 @@ body {
 }
 
 html {
-    /* Ensure the background color fills the entire viewport including overscroll */
-    background-color: var(--background);
-    scroll-behavior: smooth;
+  /* Ensure the background color fills the entire viewport including overscroll */
+  background-color: var(--background);
+  scroll-behavior: smooth;
+}
+
+@keyframes text-glow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+    opacity: 0.85;
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 30px rgba(255, 223, 0, 0.6);
+    opacity: 1;
+  }
+}
+
+.animate-text-glow {
+  animation: text-glow 2.5s ease-in-out infinite;
 }

@@ -48,16 +48,16 @@ export function ContactSection() {
                         <motion.h2
                             style={{ x, y }}
                             onMouseEnter={() => setIsHovering(true)}
-                            className="text-4xl md:text-6xl font-normal text-white font-[family-name:var(--font-great-vibes)] mb-4 inline-block cursor-grab active:cursor-grabbing hover:text-gold transition-colors"
+                            className="text-3xl md:text-5xl font-normal text-white font-[family-name:var(--font-great-vibes)] mb-3 inline-block cursor-grab active:cursor-grabbing hover:text-gold transition-colors"
                         >
                             La Musgaña
                         </motion.h2>
-                        <h3 className="text-white font-bold mb-2 opacity-50 text-base tracking-widest uppercase">Management & Booking</h3>
-                        <p className="text-base mb-6 uppercase tracking-widest text-gold/80">Oficina La Musgaña</p>
+                        <h3 className="text-white font-bold mb-2 opacity-50 text-sm tracking-widest uppercase">Management & Booking</h3>
+                        <p className="text-sm mb-4 uppercase tracking-widest text-gold/80">Oficina La Musgaña</p>
                     </div>
-                    <div className="space-y-0.5 text-base">
-                        <a href="mailto:lamusgana@gmail.com" className="block hover:text-gold transition-colors cursor-pointer text-base">lamusgana@gmail.com</a>
-                        <p className="text-base">+34 918 645 080</p>
+                    <div className="space-y-0.5 text-sm">
+                        <a href="mailto:lamusgana@gmail.com" className="block hover:text-gold transition-colors cursor-pointer text-sm">lamusgana@gmail.com</a>
+                        <p className="text-sm">+34 918 645 080</p>
                         <p className="uppercase tracking-widest text-xs opacity-60">Madrid, España</p>
                     </div>
                 </div>

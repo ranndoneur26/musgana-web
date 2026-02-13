@@ -2,6 +2,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AudioPlayer } from "@/components/ui/AudioPlayer";
 
+// Re-export generateMetadata for per-language SEO
+export { generateMetadata } from "./metadata";
+
 // Allow dynamic rendering for i18n routes
 export const dynamicParams = true;
 export const dynamic = "force-dynamic";

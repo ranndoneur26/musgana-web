@@ -80,20 +80,7 @@ export function HeroSlider() {
             ))}
 
             {/* Controls */}
-            <button
-                onClick={prev}
-                aria-label="Imagen anterior"
-                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors z-20 focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded-full"
-            >
-                <ChevronLeft size={48} />
-            </button>
-            <button
-                onClick={next}
-                aria-label="Imagen siguiente"
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors z-20 focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded-full"
-            >
-                <ChevronRight size={48} />
-            </button>
+
 
             {/* Indicators */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20" role="tablist" aria-label="Indicadores de slide">

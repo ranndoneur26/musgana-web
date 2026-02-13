@@ -12,6 +12,8 @@ export function Slider() {
     const scrollRef = React.useRef<HTMLDivElement>(null);
     const [selectedAlbum, setSelectedAlbum] = React.useState<any>(null);
     const [isModalOpen, setIsModalOpen] = React.useState(false);
+    const [isHovering, setIsHovering] = React.useState(false);
+    const [userInteracted, setUserInteracted] = React.useState(false);
 
     const albums = content.discography || [];
 
@@ -24,8 +26,41 @@ export function Slider() {
             } else {
                 current.scrollBy({ left: scrollAmount, behavior: "smooth" });
             }
+            setUserInteracted(true); // Mark that user manually scrolled
         }
     };
+
+    // Auto-scroll functionality
+    React.useEffect(() => {
+        if (isHovering || userInteracted || !scrollRef.current) return;
+
+        const intervalId = setInterval(() => {
+            if (scrollRef.current) {
+                const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+
+                // Check if we're at the end, if so, scroll back to start
+                if (scrollLeft + clientWidth >= scrollWidth - 10) {
+                    scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+                } else {
+                    // Scroll to next item
+                    scroll("right");
+                }
+            }
+        }, 3000); // 3 seconds
+
+        return () => clearInterval(intervalId);
+    }, [isHovering, userInteracted]);
+
+    // Reset user interaction flag after 10 seconds of no activity
+    React.useEffect(() => {
+        if (!userInteracted) return;
+
+        const timeoutId = setTimeout(() => {
+            setUserInteracted(false);
+        }, 5000); // Resume auto-scroll after 5 seconds
+
+        return () => clearTimeout(timeoutId);
+    }, [userInteracted]);
 
     const handleAlbumClick = (album: any) => {
         setSelectedAlbum(album);
@@ -55,6 +90,8 @@ export function Slider() {
                 {/* Scrollable Container */}
                 <div
                     ref={scrollRef}
+                    onMouseEnter={() => setIsHovering(true)}
+                    onMouseLeave={() => setIsHovering(false)}
                     className="flex space-x-6 overflow-x-auto scrollbar-hide px-4 md:px-10 snap-x snap-mandatory"
                     style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
