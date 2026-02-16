@@ -78,7 +78,7 @@ export function HeroSlider() {
             ))}
 
             {/* Overlay Text - Moved outside loop to fix H2 duplication */}
-            <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-end pb-32 text-center p-4 z-10">
+            <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-end pb-16 md:pb-20 text-center p-4 z-10">
                 <div className="group cursor-default pointer-events-auto">
                     <h1 className="flex flex-col items-center">
                         <span className="text-6xl md:text-9xl font-normal text-white mb-4 font-[family-name:var(--font-great-vibes)] group-hover:text-gold transition-colors duration-500">
