@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         return {
             title: "La Musgaña - Spanish Folk Band | Contemporary Iberian Folk Music",
             description:
-                "Official website of La Musgaña, a Spanish folk band from Castile and León. Over 35 years performing Iberian traditional music with hurdy-gurdy, Spanish bagpipes, and flute & tabor. Discography, live concerts & booking.",
+                "Discover La Musgaña, an Iberian contemporary folk music group celebrating 40 years with discography, concerts, and musical history since 1986.",
             keywords: [
                 "La Musgaña band",
                 "La Musgaña live",
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: "La Musgaña - Grupo de Música Folk Española | Folk Ibérico Contemporáneo",
         description:
-            "Web oficial de La Musgaña, grupo de música folk española y folk castellano y leonés. Más de 35 años interpretando música tradicional de Castilla y León con gaita sanabresa, zanfona, flauta de tres agujeros y tamboril. Discografía, conciertos y contratación.",
+            "Descubre La Musgaña, grupo de música de folk ibérico contemporáneo celebrando 40 años con discografía, conciertos y historia musical desde 1986.",
         keywords: [
             "La Musgaña",
             "La Musgaña conciertos",

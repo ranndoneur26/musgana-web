@@ -1,6 +1,12 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Great_Vibes, Playfair_Display, Montserrat } from "next/font/google";
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    themeColor: "#000000",
+};
 
 const greatVibes = Great_Vibes({
     weight: "400",
