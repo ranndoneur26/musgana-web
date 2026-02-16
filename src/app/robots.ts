@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/admin/', '/private/'],
         },
-        sitemap: 'https://musgana-web-9onp.vercel.app/sitemap.xml',
+        sitemap: "https://xn--lamusgaa-j3a.net/sitemap.xml",
     }
 }

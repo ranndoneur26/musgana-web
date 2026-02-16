@@ -92,7 +92,7 @@ export const metadata: Metadata = {
         locale: "es_ES",
         alternateLocale: "en_US",
         siteName: "La Musgaña",
-        url: "https://musgana-web-9onp.vercel.app",
+        url: "https://xn--lamusgaa-j3a.net",
     },
     twitter: {
         card: "summary_large_image",
@@ -105,10 +105,10 @@ export const metadata: Metadata = {
         follow: true,
     },
     alternates: {
-        canonical: "https://musgana-web-9onp.vercel.app",
+        canonical: 'https://musgana-web-9onp.vercel.app',
         languages: {
-            "es": "https://musgana-web-9onp.vercel.app/es",
-            "en": "https://musgana-web-9onp.vercel.app/en",
+            'es-ES': 'https://musgana-web-9onp.vercel.app/es',
+            'en-US': 'https://musgana-web-9onp.vercel.app/en',
         },
     },
 };

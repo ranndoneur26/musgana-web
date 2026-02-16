@@ -2,6 +2,13 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
+    const { pathname } = request.nextUrl;
+
+    // Block invalid sitemaps (e.g. /sitemap-0.xml) to prevent them matching [lang] route
+    if (pathname.startsWith('/sitemap') && pathname !== '/sitemap.xml') {
+        return new NextResponse(null, { status: 404 });
+    }
+
     const response = NextResponse.next();
 
     // Security Headers

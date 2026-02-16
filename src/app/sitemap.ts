@@ -1,12 +1,23 @@
 import { MetadataRoute } from 'next'
+import fs from 'fs'
+import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://musgana-web-9onp.vercel.app'
+    const baseUrl = "https://xn--lamusgaa-j3a.net";
+    const contentPath = path.join(process.cwd(), 'src/data/content.json');
+    let lastModified = new Date();
+
+    try {
+        const stats = fs.statSync(contentPath);
+        lastModified = stats.mtime;
+    } catch (error) {
+        console.warn("Could not get content.json stats, defaulting to current date", error);
+    }
 
     return [
         {
             url: baseUrl,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'yearly',
             priority: 1,
             alternates: {
@@ -18,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/es`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'weekly',
             priority: 1,
             alternates: {
@@ -30,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/en`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'weekly',
             priority: 0.8,
             alternates: {
@@ -42,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/es/concerts`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'weekly',
             priority: 0.8,
             alternates: {
@@ -54,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/en/concerts`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'weekly',
             priority: 0.8,
             alternates: {
@@ -66,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/es/discography`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'monthly',
             priority: 0.8,
             alternates: {
@@ -78,7 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/en/discography`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'monthly',
             priority: 0.8,
             alternates: {
@@ -90,7 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/es/videos`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'monthly',
             priority: 0.8,
             alternates: {
@@ -102,7 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseUrl}/en/videos`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'monthly',
             priority: 0.8,
             alternates: {

@@ -80,12 +80,14 @@ export function HeroSlider() {
             {/* Overlay Text - Moved outside loop to fix H2 duplication */}
             <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-end pb-32 text-center p-4 z-10">
                 <div className="group cursor-default pointer-events-auto">
-                    <h2 className="text-6xl md:text-9xl font-normal text-white mb-4 font-[family-name:var(--font-great-vibes)] group-hover:text-gold transition-colors duration-500">
-                        La Musgaña
-                    </h2>
-                    <p className="text-xl md:text-2xl text-gold uppercase tracking-[0.5em] group-hover:text-white transition-colors duration-500 font-[family-name:var(--font-playfair)]">
-                        {t.home.heroSubtitle}
-                    </p>
+                    <h1 className="flex flex-col items-center">
+                        <span className="text-6xl md:text-9xl font-normal text-white mb-4 font-[family-name:var(--font-great-vibes)] group-hover:text-gold transition-colors duration-500">
+                            La Musgaña
+                        </span>
+                        <span className="text-lg md:text-2xl text-gold uppercase tracking-[0.2em] md:tracking-[0.5em] group-hover:text-white transition-colors duration-500 font-[family-name:var(--font-playfair)] max-w-4xl leading-tight">
+                            {t.home.heroTitleSEO.replace("La Musgaña: ", "")}
+                        </span>
+                    </h1>
                 </div>
             </div>
 

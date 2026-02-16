@@ -1,17 +1,20 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
-import { useTranslation } from "@/hooks/useTranslation";
+import Image from "next/image";
 import { GlassCard } from "@/components/ui/GlassCard";
 import content from "@/data/content.json";
+import { Disc, Users, Music, ExternalLink, ShoppingCart, Calendar } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function DiscographyPage() {
     const { t, lang } = useTranslation();
+    const [selectedAlbum, setSelectedAlbum] = useState<any>(null);
 
     return (
         <div className="container mx-auto px-4 py-10 md:py-20 min-h-screen">
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white font-[family-name:var(--font-playfair)]">
                 {t.nav.discography}
             </h1>
 
@@ -23,7 +26,9 @@ export default function DiscographyPage() {
                             {album.image ? (
                                 <img
                                     src={album.image}
-                                    alt={album.title}
+                                    alt={lang === 'es'
+                                        ? `Portada del álbum ${album.title} de La Musgaña - Música Folk Ibérica`
+                                        : `Album cover for ${album.title} by La Musgaña - Iberian Folk Music`}
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             ) : (

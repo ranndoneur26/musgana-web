@@ -14,6 +14,7 @@ const dictionary = {
         home: {
             heroTitle: "La Musgaña",
             heroSubtitle: "Folk Ibérico Contemporáneo",
+            heroTitleSEO: "La Musgaña: 40 Años de Historia del Folk Ibérico Contemporáneo",
             historyTitle: "Nuestra Historia",
         },
         discography: {
@@ -98,6 +99,7 @@ const dictionary = {
         home: {
             heroTitle: "La Musgaña",
             heroSubtitle: "Contemporary Iberian Folk",
+            heroTitleSEO: "La Musgaña: 40 Years of History of Contemporary Iberian Folk",
             historyTitle: "Our History",
         },
         discography: {
