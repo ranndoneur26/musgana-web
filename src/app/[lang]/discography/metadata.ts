@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 alternateLocale: "es_ES",
             },
             alternates: {
-                canonical: "https://musgana-web-9onp.vercel.app/en/discography",
+                canonical: "https://www.lamusgaña.net/en/discography",
                 languages: {
-                    es: "https://musgana-web-9onp.vercel.app/es/discography",
-                    en: "https://musgana-web-9onp.vercel.app/en/discography",
+                    es: "https://www.lamusgaña.net/es/discography",
+                    en: "https://www.lamusgaña.net/en/discography",
                 },
             },
         };
@@ -63,10 +63,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             alternateLocale: "en_US",
         },
         alternates: {
-            canonical: "https://musgana-web-9onp.vercel.app/es/discography",
+            canonical: "https://www.lamusgaña.net/es/discography",
             languages: {
-                es: "https://musgana-web-9onp.vercel.app/es/discography",
-                en: "https://musgana-web-9onp.vercel.app/en/discography",
+                es: "https://www.lamusgaña.net/es/discography",
+                en: "https://www.lamusgaña.net/en/discography",
             },
         },
     };

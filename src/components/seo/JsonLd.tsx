@@ -4,12 +4,12 @@ export function JsonLd() {
         "@graph": [
             {
                 "@type": "MusicGroup",
-                "@id": "https://musgana-web-9onp.vercel.app/#musicgroup",
+                "@id": "https://www.lamusgaña.net/#musicgroup",
                 "name": "La Musgaña",
                 "alternateName": ["La Musgaña band", "La Musgaña ensemble"],
-                "url": "https://musgana-web-9onp.vercel.app",
-                "logo": "https://musgana-web-9onp.vercel.app/images/logo.png",
-                "image": "https://musgana-web-9onp.vercel.app/images/logo.png",
+                "url": "https://www.lamusgaña.net",
+                "logo": "https://www.lamusgaña.net/images/logo.png",
+                "image": "https://www.lamusgaña.net/images/logo.png",
                 "sameAs": [
                     "https://www.youtube.com/results?search_query=la+musgaña",
                     "https://open.spotify.com/artist/4ByMhIEOOBbpotJwMnpMjL"
@@ -96,21 +96,21 @@ export function JsonLd() {
                     "name": "Contratar La Musgaña / Book La Musgaña",
                     "target": {
                         "@type": "EntryPoint",
-                        "urlTemplate": "https://musgana-web-9onp.vercel.app/es#contact"
+                        "urlTemplate": "https://www.lamusgaña.net/es#contact"
                     },
                     "description": "Contratar La Musgaña para festivales y eventos. Book La Musgaña for festivals and events."
                 }
             },
             {
                 "@type": "WebSite",
-                "@id": "https://musgana-web-9onp.vercel.app/#website",
+                "@id": "https://www.lamusgaña.net/#website",
                 "name": "La Musgaña - Grupo de Música Folk Española",
                 "alternateName": "La Musgaña - Spanish Folk Band",
-                "url": "https://musgana-web-9onp.vercel.app",
+                "url": "https://www.lamusgaña.net",
                 "inLanguage": ["es", "en"],
                 "description": "Web oficial de La Musgaña, grupo de música folk española y folk castellano y leonés. Discografía, conciertos, vídeos y contratación.",
                 "publisher": {
-                    "@id": "https://musgana-web-9onp.vercel.app/#musicgroup"
+                    "@id": "https://www.lamusgaña.net/#musicgroup"
                 }
             }
         ]

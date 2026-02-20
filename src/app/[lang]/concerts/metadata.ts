@@ -30,10 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 alternateLocale: "es_ES",
             },
             alternates: {
-                canonical: "https://musgana-web-9onp.vercel.app/en/concerts",
+                canonical: "https://www.lamusgaña.net/en/concerts",
                 languages: {
-                    es: "https://musgana-web-9onp.vercel.app/es/concerts",
-                    en: "https://musgana-web-9onp.vercel.app/en/concerts",
+                    es: "https://www.lamusgaña.net/es/concerts",
+                    en: "https://www.lamusgaña.net/en/concerts",
                 },
             },
         };
@@ -62,10 +62,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             alternateLocale: "en_US",
         },
         alternates: {
-            canonical: "https://musgana-web-9onp.vercel.app/es/concerts",
+            canonical: "https://www.lamusgaña.net/es/concerts",
             languages: {
-                es: "https://musgana-web-9onp.vercel.app/es/concerts",
-                en: "https://musgana-web-9onp.vercel.app/en/concerts",
+                es: "https://www.lamusgaña.net/es/concerts",
+                en: "https://www.lamusgaña.net/en/concerts",
             },
         },
     };

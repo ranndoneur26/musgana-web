@@ -105,10 +105,10 @@ export const metadata: Metadata = {
         follow: true,
     },
     alternates: {
-        canonical: 'https://musgana-web-9onp.vercel.app',
+        canonical: 'https://www.lamusgaña.net',
         languages: {
-            'es-ES': 'https://musgana-web-9onp.vercel.app/es',
-            'en-US': 'https://musgana-web-9onp.vercel.app/en',
+            'es-ES': 'https://www.lamusgaña.net/es',
+            'en-US': 'https://www.lamusgaña.net/en',
         },
     },
 };

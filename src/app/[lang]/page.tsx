@@ -15,7 +15,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { LiveHistorySection } from "@/components/sections/LiveHistorySection";
 import { PodcastSection } from "@/components/sections/PodcastSection";
 import { Slider } from "@/components/ui/Slider";
-import Image from "next/image";
+
 
 export default function HomePage() {
     const { t, lang } = useTranslation();

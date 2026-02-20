@@ -30,10 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 alternateLocale: "es_ES",
             },
             alternates: {
-                canonical: "https://musgana-web-9onp.vercel.app/en/videos",
+                canonical: "https://www.lamusgaña.net/en/videos",
                 languages: {
-                    es: "https://musgana-web-9onp.vercel.app/es/videos",
-                    en: "https://musgana-web-9onp.vercel.app/en/videos",
+                    es: "https://www.lamusgaña.net/es/videos",
+                    en: "https://www.lamusgaña.net/en/videos",
                 },
             },
         };
@@ -61,10 +61,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             alternateLocale: "en_US",
         },
         alternates: {
-            canonical: "https://musgana-web-9onp.vercel.app/es/videos",
+            canonical: "https://www.lamusgaña.net/es/videos",
             languages: {
-                es: "https://musgana-web-9onp.vercel.app/es/videos",
-                en: "https://musgana-web-9onp.vercel.app/en/videos",
+                es: "https://www.lamusgaña.net/es/videos",
+                en: "https://www.lamusgaña.net/en/videos",
             },
         },
     };

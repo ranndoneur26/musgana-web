@@ -9,10 +9,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (lang === "en") {
         return {
-            title: "La Musgaña - Spanish Folk Band | Contemporary Iberian Folk Music",
+            title: "La Musgaña | 40 Years of Iberian Folk & Traditional Spanish Music",
             description:
-                "Discover La Musgaña, an Iberian contemporary folk music group celebrating 40 years with discography, concerts, and musical history since 1986.",
+                "La Musgaña: 40 years of Iberian folk and traditional Spanish music. Explore their full discography, upcoming concerts and the band's history since 1986.",
             keywords: [
+                "La Musgaña",
                 "La Musgaña band",
                 "La Musgaña live",
                 "La Musgaña discography",
@@ -23,23 +24,42 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 "folk music from Castile and León",
                 "hurdy-gurdy Spanish folk",
                 "Spanish bagpipes folk",
+                "sanabresa bagpipe",
                 "traditional flute and tabor Spain",
                 "Spanish world music band",
                 "Iberian world music",
-                "European world music Spain",
+                "European folk music Spain",
+                "book La Musgaña",
+                "La Musgaña booking",
             ],
             openGraph: {
-                title: "La Musgaña - Spanish Folk Band | Iberian Folk Music",
+                type: "website",
+                url: "https://www.lamusgaña.net/en",
+                title: "La Musgaña | 40 Years of Iberian Folk & Traditional Spanish Music",
                 description:
-                    "Over 35 years of contemporary Iberian folk. Traditional music from Castile and León with hurdy-gurdy, Spanish bagpipes, flute & tabor. Discography, concerts & booking.",
+                    "Pioneers of Iberian folk since 1986, La Musgaña celebrates 40 years blending traditional music from Castile and León with hurdy-gurdy, Spanish bagpipes and flute & tabor. Discography, concerts & booking.",
                 locale: "en_US",
                 alternateLocale: "es_ES",
             },
+            twitter: {
+                card: "summary_large_image",
+                title: "La Musgaña | 40 Years of Iberian Folk & Traditional Spanish Music",
+                description:
+                    "Pioneers of Iberian folk since 1986. Hurdy-gurdy, Spanish bagpipes and flute & tabor. Discography, concerts & booking.",
+            },
             alternates: {
-                canonical: "https://musgana-web-9onp.vercel.app/en",
+                canonical: "https://www.lamusgaña.net/en",
                 languages: {
-                    es: "https://musgana-web-9onp.vercel.app/es",
-                    en: "https://musgana-web-9onp.vercel.app/en",
+                    es: "https://www.lamusgaña.net/es",
+                    en: "https://www.lamusgaña.net/en",
+                },
+            },
+            robots: {
+                index: true,
+                follow: true,
+                googleBot: {
+                    index: true,
+                    follow: true,
                 },
             },
         };
@@ -47,18 +67,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     // Spanish (default)
     return {
-        title: "La Musgaña - Grupo de Música Folk Española | Folk Ibérico Contemporáneo",
+        title: "La Musgaña | 40 Años de Folk Ibérico y Música Tradicional Española",
         description:
-            "Descubre La Musgaña, grupo de música de folk ibérico contemporáneo celebrando 40 años con discografía, conciertos y historia musical desde 1986.",
+            "La Musgaña: 40 años de folk ibérico y música tradicional española. Explora su discografía completa, próximos conciertos y toda la historia del grupo desde 1986.",
         keywords: [
             "La Musgaña",
             "La Musgaña conciertos",
             "La Musgaña discografía",
             "grupo de música folk española",
+            "folk español",
             "folk castellano",
             "folk castellano y leonés",
             "música tradicional de Castilla y León",
             "folk ibérico",
+            "música tradicional peninsular",
             "gaita sanabresa",
             "zanfona",
             "flauta de tres agujeros y tamboril",
@@ -69,17 +91,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             "world music española",
         ],
         openGraph: {
-            title: "La Musgaña - Grupo de Música Folk Española | Folk Ibérico",
+            type: "website",
+            url: "https://www.lamusgaña.net/es",
+            title: "La Musgaña | 40 Años de Folk Ibérico y Música Tradicional Española",
             description:
-                "Más de 35 años de folk ibérico contemporáneo. Música tradicional castellana y leonesa con gaita sanabresa, zanfona y flauta de tres agujeros.",
+                "Referentes del folk ibérico desde 1986, La Musgaña celebra 40 años fusionando música tradicional castellana y leonesa con gaita sanabresa, zanfona y flauta de tres agujeros. Discografía, conciertos y mucho más.",
             locale: "es_ES",
             alternateLocale: "en_US",
         },
+        twitter: {
+            card: "summary_large_image",
+            title: "La Musgaña | 40 Años de Folk Ibérico y Música Tradicional Española",
+            description:
+                "Referentes del folk ibérico desde 1986. Gaita sanabresa, zanfona y flauta de tres agujeros. Discografía, conciertos y contratación.",
+        },
         alternates: {
-            canonical: "https://musgana-web-9onp.vercel.app/es",
+            canonical: "https://www.lamusgaña.net/es",
             languages: {
-                es: "https://musgana-web-9onp.vercel.app/es",
-                en: "https://musgana-web-9onp.vercel.app/en",
+                es: "https://www.lamusgaña.net/es",
+                en: "https://www.lamusgaña.net/en",
+            },
+        },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
             },
         },
     };
