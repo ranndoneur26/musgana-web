@@ -6,12 +6,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "@/hooks/useTranslation";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 export function HeroSlider() {
     const { t } = useTranslation();
     const [current, setCurrent] = useState(0);
 
-    // Nombres de archivos
+    // Nombres de archivos y video de YouTube al final
     const slides = [
         "/images/La_musgaña_inicios.jpg",
         "/images/La_musgaña_en_concierto.jpg",
@@ -23,21 +26,28 @@ export function HeroSlider() {
         "/images/La_musgaña_live.jpg",
         "/images/La_musgaña_trio.jpg",
         "/images/La_musgaña_anniversary.jpg",
-        "/images/La_musgaña_ifolk_music.jpg"
+        "/images/La_musgaña_ifolk_music.jpg",
+        "https://youtu.be/J_Yu2vQtxnM?si=z2MohYtYpv--SJ3d" // Video añadido al final
     ];
 
+    const isVideo = slides[current].includes("youtu");
+
     useEffect(() => {
+        // No auto-avanzar si es el video, ya que el video controlará el avance al finalizar
+        if (isVideo) return;
+
         const timer = setInterval(() => {
             setCurrent((prev) => (prev + 1) % slides.length);
         }, 5000);
         return () => clearInterval(timer);
-    }, [slides.length]);
+    }, [slides.length, isVideo, current]);
 
     const next = () => setCurrent((prev) => (prev + 1) % slides.length);
     const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
     // Helper to generate SEO-friendly alt text
     const getAltText = (path: string) => {
+        if (path.includes("youtu")) return "La Musgaña Video";
         // Extract filename without path and extension
         const filename = path.split('/').pop()?.split('.')[0] || "";
         // Replace ñ with n for English compatibility in alt text
@@ -57,23 +67,45 @@ export function HeroSlider() {
                         index === current ? "pointer-events-auto" : "pointer-events-none"
                     )}
                 >
-                    {/* Real Image */}
-                    <div className="relative w-full h-full">
-                        <Image
-                            src={src}
-                            alt={getAltText(src)}
-                            fill
-                            className="object-cover"
-                            style={{
-                                objectPosition: src.includes("La_musgaña_trio.jpg") ? "center 5%" : "center center"
-                            }}
-                            priority={index === 0}
-                        />
-                        {/* Fallback/Placeholder if image missing (for development) */}
-                        <div className="absolute inset-0 bg-zinc-800 -z-10 flex items-center justify-center">
-                            <span className="text-zinc-700">Add {src} to public folder</span>
+                    {src.includes("youtu") ? (
+                        <div className="w-full h-full bg-black flex items-center justify-center">
+                            {/* Renderizar ReactPlayer solo en el slide actual para evitar sobrecarga y asegurar reproducción correcta */}
+                            {index === current && (
+                                <ReactPlayer
+                                    url={src}
+                                    playing={true} // Autoplay on active
+                                    muted={true} // Autoplay normally needs to be muted to work without user interaction
+                                    controls={true} // Mostrar controles por si quieren activar el sonido
+                                    width="100%"
+                                    height="100%"
+                                    onEnded={next} // Al finalizar, ir al slide 1
+                                    className="object-cover pointer-events-auto"
+                                    config={{
+                                        youtube: {
+                                            playerVars: { autoplay: 1, rel: 0, showinfo: 0 }
+                                        }
+                                    }}
+                                />
+                            )}
                         </div>
-                    </div>
+                    ) : (
+                        <div className="relative w-full h-full">
+                            <Image
+                                src={src}
+                                alt={getAltText(src)}
+                                fill
+                                className="object-cover"
+                                style={{
+                                    objectPosition: src.includes("La_musgaña_trio.jpg") ? "center 5%" : "center center"
+                                }}
+                                priority={index === 0}
+                            />
+                            {/* Fallback/Placeholder if image missing (for development) */}
+                            <div className="absolute inset-0 bg-zinc-800 -z-10 flex items-center justify-center">
+                                <span className="text-zinc-700">Add {src} to public folder</span>
+                            </div>
+                        </div>
+                    )}
                 </motion.div>
             ))}
 

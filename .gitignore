@@ -33,6 +33,7 @@ ts-debug.log*
 next-env.d.ts
 .env.local.bak
 .npm-cache/
+.npm_cache/
 .deploy_clean_v*/
 .vercel-config/
 deploy_clean_v*/
