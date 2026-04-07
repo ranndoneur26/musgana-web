@@ -2,8 +2,10 @@
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export function ContactSection() {
+    const { lang } = useTranslation();
     const logoRef = useRef<HTMLDivElement>(null);
     const [isHovering, setIsHovering] = useState(false);
 
@@ -35,8 +37,17 @@ export function ContactSection() {
     };
 
     return (
-        <section className="container mx-auto px-4 py-6 md:py-10 flex flex-col items-center justify-center min-h-[40vh]">
+        <section id="contact" className="container mx-auto px-4 py-6 md:py-10 flex flex-col items-center justify-center min-h-[40vh]">
             <div className="w-full max-w-5xl flex flex-col items-center text-center">
+
+                {lang === "en" ? (
+                    <div className="mb-8 space-y-3 text-zinc-300 text-sm md:text-base leading-relaxed max-w-2xl">
+                        <h2 className="text-xl md:text-3xl font-semibold text-gold font-[family-name:var(--font-playfair)] mb-4">Contact &amp; Booking</h2>
+                        <p>For management, booking or press enquiries about La Musgaña, please contact the official office in Madrid. The band is available for folk festivals, theatres, cultural events, educational concerts and collaborations focused on Spanish and Iberian traditional music.</p>
+                    </div>
+                ) : (
+                    <h2 className="text-xl md:text-3xl font-semibold text-gold font-[family-name:var(--font-playfair)] mb-6">Contacto</h2>
+                )}
 
                 {/* Management Info */}
                 <div

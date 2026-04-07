@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         return {
             title: "La Musgaña | 40 Years of Iberian Folk & Traditional Spanish Music",
             description:
-                "La Musgaña: 40 years of Iberian folk and traditional Spanish music. Explore their full discography, upcoming concerts and the band's history since 1986.",
+                "La Musgaña is a pioneering Spanish folk band from Madrid, blending Castilian traditional music with contemporary arrangements. Discover 40 years of Iberian folk history, albums, and upcoming live concerts.",
             keywords: [
                 "La Musgaña",
                 "La Musgaña band",
@@ -37,7 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 url: "https://www.lamusgaña.net/en",
                 title: "La Musgaña | 40 Years of Iberian Folk & Traditional Spanish Music",
                 description:
-                    "Pioneers of Iberian folk since 1986, La Musgaña celebrates 40 years blending traditional music from Castile and León with hurdy-gurdy, Spanish bagpipes and flute & tabor. Discography, concerts & booking.",
+                    "La Musgaña is a pioneering Spanish folk band from Madrid, blending Castilian traditional music with contemporary arrangements. Discover 40 years of Iberian folk history, albums, and upcoming live concerts.",
+                images: ["/images/La_musgaña_en_concierto.jpg"],
                 locale: "en_US",
                 alternateLocale: "es_ES",
             },
@@ -96,6 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             title: "La Musgaña | 40 Años de Folk Ibérico y Música Tradicional Española",
             description:
                 "Referentes del folk ibérico desde 1986, La Musgaña celebra 40 años fusionando música tradicional castellana y leonesa con gaita sanabresa, zanfona y flauta de tres agujeros. Discografía, conciertos y mucho más.",
+            images: ["/images/La_musgaña_en_concierto.jpg"],
             locale: "es_ES",
             alternateLocale: "en_US",
         },

@@ -15,7 +15,7 @@ const VIDEO_LIST = [
 ];
 
 export function VideosSection() {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isPlaylistOpen, setIsPlaylistOpen] = useState(false);
@@ -34,9 +34,15 @@ export function VideosSection() {
     return (
         <section className="container mx-auto px-4 py-4 md:py-8">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-xl md:text-3xl font-semibold mb-8 text-left text-gold font-[family-name:var(--font-playfair)]">
+                <h2 className="text-xl md:text-3xl font-semibold mb-4 text-left text-gold font-[family-name:var(--font-playfair)]">
                     {t.nav.videos}
                 </h2>
+
+                {lang === "en" ? (
+                    <p className="mb-6 text-zinc-300 text-sm md:text-base leading-relaxed max-w-3xl">
+                        Watch live performances, official videos and archival recordings that showcase La Musgaña&apos;s powerful stage presence. From intimate duos to full-band arrangements, these live videos highlight the richness of Spanish folk instruments and the group&apos;s distinctive sound.
+                    </p>
+                ) : null}
 
                 <div className="flex flex-col gap-8">
                     {/* Main Player Area - Full Width */}

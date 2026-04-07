@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false });
 
 export function HeroSlider() {
-    const { t } = useTranslation();
+    const { t, lang } = useTranslation();
     const [current, setCurrent] = useState(0);
 
     // Nombres de archivos y video de YouTube al final
@@ -45,13 +45,23 @@ export function HeroSlider() {
     const next = () => setCurrent((prev) => (prev + 1) % slides.length);
     const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
-    // Helper to generate SEO-friendly alt text
+    // Descriptive SEO alt texts per image
+    const altTexts: Record<string, string> = {
+        "/images/La_musgaña_inicios.jpg": "La Musgaña early years, Spanish folk band from Madrid",
+        "/images/La_musgaña_en_concierto.jpg": "La Musgaña live concert, Spanish folk band on stage",
+        "/images/La_musgaña_en_directo.jpg": "La Musgaña performing live on stage, Iberian folk music",
+        "/images/La_musgaña_Quique_almendros.jpg": "Quique Almendros, co-founder of La Musgaña Spanish folk band",
+        "/images/La_musgaña_carlos_beceiro.jpg": "Carlos Beceiro, member of La Musgaña playing traditional Iberian folk instruments",
+        "/images/La_musgaña_Antonio_Pedraza.jpg": "Luis Antonio Pedraza playing gaita sanabresa, La Musgaña folk trio",
+        "/images/La_musgaña_Jaime_Muñoz.jpg": "Jaime Muñoz, member of La Musgaña playing Castilian folk flute",
+        "/images/La_musgaña_live.jpg": "La Musgaña live performance, contemporary Iberian folk band from Madrid",
+        "/images/La_musgaña_trio.jpg": "Members of La Musgaña playing traditional Castilian folk instruments on stage",
+        "/images/La_musgaña_anniversary.jpg": "La Musgaña 40th anniversary celebration, Spanish folk band",
+        "/images/La_musgaña_ifolk_music.jpg": "La Musgaña at international folk music festival, Iberian folk band",
+    };
     const getAltText = (path: string) => {
-        if (path.includes("youtu")) return "La Musgaña Video";
-        // Extract filename without path and extension
-        const filename = path.split('/').pop()?.split('.')[0] || "";
-        // Replace ñ with n for English compatibility in alt text
-        return filename.replace(/ñ/g, "n");
+        if (path.includes("youtu")) return "La Musgaña – Live Video Performance";
+        return altTexts[path] ?? "La Musgaña Spanish folk band performance";
     };
 
     return (
@@ -100,10 +110,6 @@ export function HeroSlider() {
                                 }}
                                 priority={index === 0}
                             />
-                            {/* Fallback/Placeholder if image missing (for development) */}
-                            <div className="absolute inset-0 bg-zinc-800 -z-10 flex items-center justify-center">
-                                <span className="text-zinc-700">Add {src} to public folder</span>
-                            </div>
                         </div>
                     )}
                 </motion.div>
@@ -120,9 +126,16 @@ export function HeroSlider() {
                             La Musgaña
                         </span>
                         <span className="text-lg md:text-2xl text-gold uppercase tracking-[0.2em] md:tracking-[0.5em] group-hover:text-white transition-colors duration-500 font-[family-name:var(--font-playfair)] max-w-4xl leading-tight">
-                            {t.home.heroTitleSEO.replace("La Musgaña: ", "")}
+                            {lang === 'en'
+                                ? '40 Years of Contemporary Iberian Folk'
+                                : t.home.heroTitleSEO.replace('La Musgaña: ', '')}
                         </span>
                     </h1>
+                    <p className="mt-4 text-sm md:text-base text-white/70 max-w-xl mx-auto leading-relaxed font-[family-name:var(--font-playfair)] tracking-wide">
+                        {lang === 'en'
+                            ? 'A Madrid-based Spanish folk band redefining Castilian traditional music since 1986, blending ancestral melodies with innovative contemporary arrangements.'
+                            : 'Un conjunto de folk ibérico de Madrid que redefine la música tradicional castellana desde 1986.'}
+                    </p>
                 </div>
             </div>
 
