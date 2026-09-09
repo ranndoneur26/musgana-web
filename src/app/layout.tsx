@@ -118,6 +118,7 @@ import { SessionTracker } from "@/components/ui/SessionTracker";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 
 import { JsonLd } from "@/components/seo/JsonLd";
+import { ConcertPopup } from "@/components/ui/ConcertPopup";
 
 
 export default function RootLayout({
@@ -132,6 +133,7 @@ export default function RootLayout({
                 <SessionTracker />
                 <CookieConsent />
                 <JsonLd />
+                <ConcertPopup />
                 <main id="main-content">
                     {children}
                 </main>
