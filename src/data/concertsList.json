@@ -1,5 +1,20 @@
 [
     {
+        "date": "2026-05-28",
+        "location": {
+            "es": "Madrid, España",
+            "en": "Madrid, Spain"
+        },
+        "venue": {
+            "es": "Teatro Pavón",
+            "en": "Teatro Pavón"
+        },
+        "notes": {
+            "es": "La Musgaña 40º aniversario",
+            "en": "La Musgaña 40th anniversary"
+        }
+    },
+    {
         "date": "2025-11-14",
         "location": {
             "es": "Dublín (Sandymount), Irlanda",
