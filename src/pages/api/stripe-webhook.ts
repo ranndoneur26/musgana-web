@@ -18,21 +18,36 @@ async function buffer(readable: Readable) {
   return Buffer.concat(chunks);
 }
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-12-18.acacia' as any, // Use latest or matching version from package.json if known, utilizing installed version default usually works but explicit is safer if typed
-});
+let stripe: Stripe;
+let transporter: nodemailer.Transporter;
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT),
-  secure: false, // true for 465, false for other ports
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+function getStripe() {
+  if (!stripe) {
+    stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+      apiVersion: '2024-12-18.acacia' as any,
+    });
+  }
+  return stripe;
+}
 
+function getTransporter() {
+  if (!transporter) {
+    transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+  }
+  return transporter;
+}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const stripe = getStripe();
+  const transporter = getTransporter();
+
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
@@ -60,17 +75,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       // Fetch line items to display products
       const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
-      
+
       const customerName = session.customer_details?.name || 'Cliente';
       const customerEmail = session.customer_details?.email || 'No email';
       const customerPhone = session.customer_details?.phone || 'No teléfono';
-      
+
       // Address from Stripe or Metadata
       const sessionWithShipping = session as any;
       const address = sessionWithShipping.shipping_details?.address || session.customer_details?.address;
-      
+
       const metadata = session.metadata || {};
-      
+
       const genero = metadata.genero ?? "No indicado";
       const talla = metadata.talla ?? "No indicada";
       const cantidad = metadata.cantidad ?? "1";
@@ -84,7 +99,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         País: ${metadata.pais || address?.country || ''}
       `;
 
-      const productsHtml = lineItems.data.map(item => 
+      const productsHtml = lineItems.data.map(item =>
         `<li>${item.description} (x${item.quantity}) - ${(item.amount_total / 100).toFixed(2)}€</li>`
       ).join('');
 

@@ -2,10 +2,12 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { headers } from 'next/headers';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
-const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
-
 export async function POST(req: Request) {
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+        apiVersion: '2024-12-18.acacia' as any,
+    });
+    const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
     const body = await req.text();
     const sig = (await headers()).get('stripe-signature') as string;
 
