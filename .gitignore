@@ -37,3 +37,4 @@ next-env.d.ts
 .deploy_clean_v*/
 .vercel-config/
 deploy_clean_v*/
+.npm_local_cache/

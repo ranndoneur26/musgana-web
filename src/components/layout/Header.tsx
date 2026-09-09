@@ -42,6 +42,9 @@ export function Header() {
                     <Link href={`/${lang}#concerts`} className="text-xs uppercase tracking-wide hover:text-gold transition-colors">
                         {t.nav.concerts}
                     </Link>
+                    <Link href={`/${lang}/tienda`} className="text-xs uppercase tracking-wide text-gold hover:text-white transition-colors font-bold">
+                        {t.nav.store}
+                    </Link>
                     <Link href={`/${lang}#contact`} className="text-xs uppercase tracking-wide hover:text-gold transition-colors">
                         {t.nav.contact}
                     </Link>
@@ -110,6 +113,13 @@ export function Header() {
                                 className="text-xs uppercase tracking-wide hover:text-gold transition-colors py-2"
                             >
                                 {t.nav.concerts}
+                            </Link>
+                            <Link
+                                href={`/${lang}/tienda`}
+                                onClick={closeMenu}
+                                className="text-xs uppercase tracking-wide text-gold hover:text-white transition-colors py-2 font-bold"
+                            >
+                                {t.nav.store}
                             </Link>
                             <Link
                                 href={`/${lang}#contact`}

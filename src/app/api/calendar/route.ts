@@ -28,11 +28,9 @@ export async function GET() {
 
         // Determine "Today" in Europe/Madrid context
         const now = new Date();
-        // Create start of today (00:00:00) and end of today (23:59:59)
+        // Create start of today (00:00:00)
         const startOfDay = new Date(now);
         startOfDay.setHours(0, 0, 0, 0);
-        const endOfDay = new Date(now);
-        endOfDay.setHours(23, 59, 59, 999);
 
         const events: CalendarEvent[] = [];
 
@@ -43,23 +41,16 @@ export async function GET() {
             if (event.isRecurring()) {
                 const iterator = event.iterator();
                 let next;
-
-                // Iterate through occurrences
-                // We assume we don't need to look back too far, but we need to find if there is an occurrence TODAY.
-                // limit iteration to avoid infinite loops, though iterator usually handles it.
-                // We skip past events effectively by checking the time.
+                let occurrencesChecked = 0;
+                const maxOccurrences = 1000; // limit iteration
 
                 // Convert JS dates to ICAL.Time for comparison if needed, or just iterate and convert results
-                while ((next = iterator.next())) {
+                while ((next = iterator.next()) && occurrencesChecked < maxOccurrences) {
+                    occurrencesChecked++;
                     const occurrenceDate = next.toJSDate();
 
-                    // If occurrence is after today, stop
-                    if (occurrenceDate > endOfDay) {
-                        break;
-                    }
-
-                    // If occurrence is within today
-                    if (occurrenceDate >= startOfDay && occurrenceDate <= endOfDay) {
+                    // We only care about the *first* occurrence that is on or after today
+                    if (occurrenceDate >= startOfDay) {
                         events.push({
                             title: event.summary,
                             date: occurrenceDate.toISOString(),
@@ -67,12 +58,13 @@ export async function GET() {
                             description: event.description || '',
                             isAllDay: event.startDate.isDate
                         });
+                        break;
                     }
                 }
             } else {
                 // Single Event
                 const eventDate = event.startDate.toJSDate();
-                if (eventDate >= startOfDay && eventDate <= endOfDay) {
+                if (eventDate >= startOfDay) {
                     events.push({
                         title: event.summary,
                         date: eventDate.toISOString(),
@@ -87,7 +79,23 @@ export async function GET() {
         // Sort by date/time
         events.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-        return NextResponse.json({ events });
+        // Filter to only include events from the very first upcoming date
+        let nextEvents: CalendarEvent[] = [];
+        if (events.length > 0) {
+            const firstEventDate = new Date(events[0].date);
+            const firstEventStartOfDay = new Date(firstEventDate);
+            firstEventStartOfDay.setHours(0, 0, 0, 0);
+
+            const firstEventEndOfDay = new Date(firstEventDate);
+            firstEventEndOfDay.setHours(23, 59, 59, 999);
+
+            nextEvents = events.filter(e => {
+                const d = new Date(e.date);
+                return d >= firstEventStartOfDay && d <= firstEventEndOfDay;
+            });
+        }
+
+        return NextResponse.json({ events: nextEvents });
     } catch (error) {
         console.error('Error fetching calendar:', error);
         return NextResponse.json({ error: 'Failed to fetch calendar events' }, { status: 500 });

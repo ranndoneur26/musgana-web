@@ -41,17 +41,17 @@ export function LiveHistorySection() {
 
     const items = [{
         id: "live-history-list",
-        title: t.liveHistory.accordionTitle,
+        title: (
+            <span className="text-xl md:text-3xl font-semibold text-gold font-[family-name:var(--font-playfair)] animate-text-glow">
+                {t.liveHistory.title}
+            </span>
+        ),
         content: tableContent
     }];
 
     return (
         <section id="live-history" className="container mx-auto px-4 pb-8 relative z-30">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-xl md:text-3xl font-semibold mb-8 text-left text-gold font-[family-name:var(--font-playfair)] animate-text-glow">
-                    {t.liveHistory.title}
-                </h2>
-
                 <div
                     className="relative"
                     onMouseEnter={() => !hasInteraction && setIsHovered(true)}

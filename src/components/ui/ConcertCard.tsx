@@ -8,6 +8,39 @@ interface ConcertCardProps {
     description?: string;
 }
 
+// Helper function to detect URLs and wrap them in <a> tags
+const renderDescriptionWithLinks = (text: string) => {
+    // Regex to match URLs starting with http, https, or www.
+    const urlRegex = /(https?:\/\/[^\s]+)|(www\.[^\s]+)/g;
+
+    // Split the text by URLs to maintain the non-URL parts
+    const parts = text.split(urlRegex);
+
+    return parts.map((part, index) => {
+        if (!part) return null;
+
+        // If it matches a URL, render an anchor tag
+        if (part.match(urlRegex)) {
+            // Add https:// if it only starts with www.
+            const href = part.startsWith('www.') ? `https://${part}` : part;
+            return (
+                <a
+                    key={index}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold hover:underline font-medium break-all"
+                >
+                    {part}
+                </a>
+            );
+        }
+
+        // Otherwise return plain text
+        return <span key={index}>{part}</span>;
+    });
+};
+
 export function ConcertCard({ date, title, location, description }: ConcertCardProps) {
     const eventDate = new Date(date);
     const day = eventDate.getDate();
@@ -43,8 +76,8 @@ export function ConcertCard({ date, title, location, description }: ConcertCardP
                 </div>
 
                 {description && (
-                    <p className="text-zinc-400 text-sm line-clamp-2 max-w-2xl">
-                        {description}
+                    <p className="text-zinc-400 text-sm max-w-3xl whitespace-pre-line">
+                        {renderDescriptionWithLinks(description)}
                     </p>
                 )}
             </div>

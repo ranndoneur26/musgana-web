@@ -119,6 +119,8 @@ import { CookieConsent } from "@/components/ui/CookieConsent";
 
 import { JsonLd } from "@/components/seo/JsonLd";
 
+import { WelcomePopup } from "@/components/ui/WelcomePopup";
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -131,6 +133,7 @@ export default function RootLayout({
                 <SessionTracker />
                 <CookieConsent />
                 <JsonLd />
+                <WelcomePopup />
                 <main id="main-content">
                     {children}
                 </main>

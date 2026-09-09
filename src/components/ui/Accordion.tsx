@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 interface AccordionItemProps {
-    title: string;
+    title: React.ReactNode;
     children: React.ReactNode;
     isOpen: boolean;
     onToggle: () => void;
@@ -37,17 +37,19 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
                 <span className="flex-1 pr-4 text-left">
                     {(() => {
                         // Check if title has pattern: "YYYY-YYYY - Title. Rest of text"
-                        const match = title.match(/^(\d{4}-\d{4})\s*-\s*([^.]+\.)\s*(.*)$/);
-                        if (match) {
-                            const [, period, subtitle, rest] = match;
-                            return (
-                                <>
-                                    <span className="font-bold text-[1.15rem]">{period}</span>
-                                    {" - "}
-                                    <span className="font-bold text-[1.15rem]">{subtitle}</span>
-                                    {rest && <> {rest}</>}
-                                </>
-                            );
+                        if (typeof title === 'string') {
+                            const match = title.match(/^(\d{4}-\d{4})\s*-\s*([^.]+\.)\s*(.*)$/);
+                            if (match) {
+                                const [, period, subtitle, rest] = match;
+                                return (
+                                    <>
+                                        <span className="font-bold text-[1.15rem]">{period}</span>
+                                        {" - "}
+                                        <span className="font-bold text-[1.15rem]">{subtitle}</span>
+                                        {rest && <> {rest}</>}
+                                    </>
+                                );
+                            }
                         }
                         return title;
                     })()}
@@ -89,7 +91,7 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
 }
 
 interface AccordionProps {
-    items: { id: string; title: string; content: string | React.ReactNode }[];
+    items: { id: string; title: React.ReactNode; content: string | React.ReactNode }[];
     className?: string;
 }
 
