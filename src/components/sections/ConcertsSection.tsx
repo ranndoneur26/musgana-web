@@ -3,7 +3,6 @@
 import { useTranslation } from "@/hooks/useTranslation";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { motion } from "framer-motion";
-import { DailyCalendar } from "@/components/ui/DailyCalendar";
 
 import Image from "next/image";
 
@@ -24,17 +23,6 @@ export function ConcertsSection() {
                     />
                 </div>
             </div>
-
-            <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="w-full max-w-5xl -mt-12 md:-mt-24 z-10 relative flex justify-center"
-            >
-                {/* Daily Calendar Replaces Previous Grid / Google Calendar */}
-                <DailyCalendar className="w-full mx-auto md:mb-8 mb-12" />
-            </motion.div>
         </section>
     );
 }
