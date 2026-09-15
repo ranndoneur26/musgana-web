@@ -65,7 +65,7 @@ export function ConcertPopup() {
 
                                 {/* Title */}
                                 <h2 className="text-2xl sm:text-3xl font-bold text-gold font-[family-name:var(--font-playfair)] leading-tight mb-1">
-                                    LA MUSGAÑA
+                                    LA MUSGAÑA (duo)
                                 </h2>
 
                                 {/* Subtitle */}
