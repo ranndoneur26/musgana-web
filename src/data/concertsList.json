@@ -1,5 +1,20 @@
 [
     {
+        "date": "2026-09-19",
+        "location": {
+            "es": "Leganés, España",
+            "en": "Leganés, Spain"
+        },
+        "venue": {
+            "es": "Festival de Folklore",
+            "en": "Folklore Festival"
+        },
+        "notes": {
+            "es": "Día de Extremadura (20:30 h)",
+            "en": "Extremadura Day (20:30 h)"
+        }
+    },
+    {
         "date": "2026-05-28",
         "location": {
             "es": "Madrid, España",
