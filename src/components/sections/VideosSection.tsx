@@ -10,8 +10,9 @@ const ReactPlayer = dynamic(() => import("react-player/youtube"), { ssr: false }
 
 const VIDEO_LIST = [
     { id: "RV8l4BWSDrk", key: "v1" },
-    { id: "5Ath7RHXgh4", key: "v2" },
+    { id: "EB705MaV6vM", key: "v2" },
     { id: "mOSdUJjwrGQ", key: "v3" },
+    { id: "HAf-qx9D2iY", key: "v4" },
 ];
 
 export function VideosSection() {

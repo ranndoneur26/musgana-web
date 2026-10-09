@@ -37,8 +37,9 @@ const dictionary = {
             playlistTitle: "Lista de Reproducción",
             items: {
                 v1: "Briana",
-                v2: "Fiestas de San Isidro 2022",
+                v2: "Fetén Fetén - Picao (con la Musgaña)",
                 v3: "Festival on the Green 1997",
+                v4: "Concierto del grupo folk La Musgaña en la Sala Galileo Galei"
             }
         },
         sections: {
@@ -173,7 +174,7 @@ const dictionary = {
             playlistTitle: "Playlist",
             items: {
                 v1: "Briana",
-                v2: "San Isidro Festival 2022",
+                v2: "Fetén Fetén - Picao (with La Musgaña)",
                 v3: "Festival on the Green 1997",
             }
         },
