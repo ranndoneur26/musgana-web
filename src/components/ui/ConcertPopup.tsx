@@ -12,7 +12,7 @@ export function ConcertPopup() {
         if (!hasSeen) {
             const timer = setTimeout(() => {
                 setIsOpen(true);
-                sessionStorage.setItem("hasSeenConcertPopup", "true");
+                sessionStorage.setItem("hasSeenMarsillachPopup", "true");
             }, 1200);
             return () => clearTimeout(timer);
         }
@@ -69,41 +69,45 @@ export function ConcertPopup() {
                                 </h2>
 
                                 {/* Subtitle */}
-                                <p className="text-gold/50 text-sm tracking-widest uppercase mb-6">
-                                    Concierto
+                                <p className="text-gold/50 text-xs tracking-widest uppercase mb-4">
+                                    Concierto especial conmemorativo de su trayectoria y folk ibérico
                                 </p>
 
                                 {/* Divider */}
-                                <div className="w-12 h-px bg-gold/30 mx-auto mb-6" />
+                                <div className="w-12 h-px bg-gold/30 mx-auto mb-4" />
 
                                 {/* Date & Time */}
                                 <div className="mb-2">
                                     <p className="text-white text-lg sm:text-xl font-semibold font-[family-name:var(--font-playfair)]">
-                                        19 de septiembre
-                                    </p>
-                                    <p className="text-zinc-300 text-base mt-1">
-                                        20:30 h
+                                        20 de noviembre de 2026
                                     </p>
                                 </div>
 
                                 {/* Divider */}
-                                <div className="w-8 h-px bg-gold/20 mx-auto my-5" />
+                                <div className="w-8 h-px bg-gold/20 mx-auto my-4" />
 
                                 {/* Location */}
-                                <div className="mb-2">
+                                <div className="mb-4">
                                     <p className="text-white text-lg font-semibold font-[family-name:var(--font-playfair)]">
-                                        Leganés
+                                        Teatro Auditorio Adolfo Marsillach
                                     </p>
                                     <p className="text-zinc-400 text-sm mt-1 leading-relaxed">
-                                        Festival de Folklore
+                                        Av. de Baunatal, 18
                                     </p>
                                     <p className="text-gold/70 text-sm mt-1 italic">
-                                        Día de Extremadura
+                                        San Sebastián de los Reyes (Madrid)
+                                    </p>
+                                </div>
+
+                                {/* Program Statement */}
+                                <div className="px-4 py-2 border border-gold/10 bg-gold/5 rounded-lg">
+                                    <p className="text-zinc-300 text-xs sm:text-sm italic leading-relaxed">
+                                        "La mítica formación madrileña repasa su legado de cuatro décadas de investigación y renovación del folk ibérico"
                                     </p>
                                 </div>
 
                                 {/* Ornamental bottom separator */}
-                                <div className="flex items-center justify-center gap-3 mt-8">
+                                <div className="flex items-center justify-center gap-3 mt-6">
                                     <span className="block w-16 h-px bg-gold/20" />
                                     <span className="text-gold/40 text-lg">✦</span>
                                     <span className="block w-16 h-px bg-gold/20" />
