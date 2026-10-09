@@ -78,16 +78,29 @@ export default function HomePage() {
                         <h2 className="text-xl md:text-3xl font-semibold mb-6 text-left tracking-wide text-gold font-[family-name:var(--font-playfair)]">
                             {lang === "en" ? "Interview - Onda Regional de Murcia" : "Entrevista - Onda Regional de Murcia"}
                         </h2>
-                        <div className="w-full h-[500px] md:h-[600px] rounded-xl overflow-hidden shadow-xl border border-zinc-800 relative bg-zinc-900/40">
-                            <iframe
-                                src="https://www.orm.es/programas/el-rompeolas/la-musgana-cuatro-decadas-de-vanguardia-y-tradicion-en-el-folk-castellano/"
-                                className="absolute top-0 left-0 w-full h-full"
-                                style={{ border: 'none' }}
-                                title="Entrevista Onda Regional de Murcia - La Musgaña"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                                loading="lazy"
-                            />
-                        </div>
+                        <GlassCard className="p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-zinc-800/80">
+                            <div className="flex-1 space-y-4">
+                                <h3 className="text-xl md:text-2xl font-medium text-zinc-100 font-[family-name:var(--font-playfair)]">
+                                    La Musgaña. Cuatro décadas de vanguardia y tradición en el folk castellano
+                                </h3>
+                                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
+                                    {lang === "en" ?
+                                        "Jaime Muñoz, founding member of La Musgaña, reviews the 40-year career of the Madrid band and discusses their dedication to the research and dissemination of popular culture." :
+                                        "Jaime Muñoz, miembro fundador de La Musgaña, repasa los 40 años de trayectoria de la formación madrileña y su dedicación a la investigación y difusión de la cultura popular."}
+                                </p>
+                            </div>
+                            <a
+                                href="https://www.orm.es/programas/el-rompeolas/la-musgana-cuatro-decadas-de-vanguardia-y-tradicion-en-el-folk-castellano/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group shrink-0 inline-flex items-center justify-center gap-3 bg-gold text-zinc-900 px-8 py-4 rounded-full font-semibold hover:bg-gold/90 transition-all duration-300 shadow-lg shadow-gold/20"
+                            >
+                                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                {lang === "en" ? "Listen on ORM" : "Escuchar en ORM"}
+                            </a>
+                        </GlassCard>
                     </div>
                 </div>
             </section>
