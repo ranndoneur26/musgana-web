@@ -71,7 +71,26 @@ export default function HomePage() {
                 </div>
             </section>
 
-
+            {/* INTERVIEW ORM */}
+            <section id="interview" className="w-full py-6 md:py-10">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto">
+                        <h2 className="text-xl md:text-3xl font-semibold mb-6 text-left tracking-wide text-gold font-[family-name:var(--font-playfair)]">
+                            {lang === "en" ? "Interview - Onda Regional de Murcia" : "Entrevista - Onda Regional de Murcia"}
+                        </h2>
+                        <div className="w-full h-[500px] md:h-[600px] rounded-xl overflow-hidden shadow-xl border border-zinc-800 relative bg-zinc-900/40">
+                            <iframe
+                                src="https://www.orm.es/programas/el-rompeolas/la-musgana-cuatro-decadas-de-vanguardia-y-tradicion-en-el-folk-castellano/"
+                                className="absolute top-0 left-0 w-full h-full"
+                                style={{ border: 'none' }}
+                                title="Entrevista Onda Regional de Murcia - La Musgaña"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* DISCOGRAPHY */}
             <section id="discography" className="w-full py-4 md:py-8">
