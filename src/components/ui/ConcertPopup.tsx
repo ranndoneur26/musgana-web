@@ -8,7 +8,7 @@ export function ConcertPopup() {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        const hasSeen = sessionStorage.getItem("hasSeenConcertPopup");
+        const hasSeen = sessionStorage.getItem("hasSeenMarsillachPopup");
         if (!hasSeen) {
             const timer = setTimeout(() => {
                 setIsOpen(true);
